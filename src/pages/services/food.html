@@ -1,0 +1,712 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Tree Services</title>
+    <link rel="icon" href="../../../assets/img/fav-logo.png" type="image/webp">
+
+    <!-- Slick CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Bootstrap 5.3.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!-- Main css -->
+    <link rel="stylesheet" href="../../css/main.css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Data AOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+
+
+    <style>
+        b {
+            font-weight: 700 !important;
+        }
+        main {
+            overflow-x: hidden !important;
+        }
+        /* Hero section */
+        .services-hero {
+            padding: 100px 50px 20px 50px !important;
+        }
+        @media (max-width: 992px) {
+            .custom-reverse {
+                display: flex;
+                flex-wrap: wrap-reverse;
+            }
+            /* For custom column widths */
+            .custom-col {
+                display: none !important;
+            }
+            .custom-col1 {
+                display: block !important;
+            }
+            .page-custom-col {
+                display: none !important;
+            }
+        }
+        @media (max-width: 768px) {
+            .custom-col1 {
+                display: none !important;
+            }
+        }
+        .active-product {
+            display: block !important;
+        }
+        .active-service {
+            color: #508b5d;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container-wrapper">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light navbar-custom-bg">
+            <div class="container-fluid nav-container">
+                <a class="navbar-brand d-flex justify-content-center align-items-center" href="../../../index.html">
+                    <img src="../../../assets/img/fav-logo1.png" alt="" class="img-fluid nav-logo">
+                    <h2 class="nav-heading text-custom">Colortree</h2>
+                </a>
+                <button class="navbar-toggler" id="navbarToggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i id="toggleIcon" class="fas fa-bars text-custom"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item dropdown m-0">
+                        <li class="nav-item"><a id="faq" class="nav-link mx-2 fs-5 text-custom" href="../../../index.html">Home</a></li>
+                        <li class="nav-item dropdown m-0">
+                            <a class="nav-link dropdown-toggle fs-5 mx-2 active-nav-link text-custom" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                            <ul class="dropdown-menu">
+                                <li><a id="food" class="dropdown-item active-service" href="./food.html">Food Packaging</a></li>
+                                <li><a id="industrial" class="dropdown-item" href="./industrial.html">Industrial Packaging</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a id="inquire" class="nav-link mx-2 fs-5 text-custom" href="../inquire/inquire.html">Inquire</a></li>
+                        <li class="nav-item"><a id="inquire" class="nav-link mx-2 fs-5 text-custom" href="../hiring/hiring.html">Hiring</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Body content -->
+        <main class="mb-5">
+            <!-- hero section -->
+            <div class="overflow-x-hidden bg-custom" data-aos="fade-up" data-aos-delay="">
+                <div class="row custom-reverse services-hero gy-3">
+                    <div class="col-lg-4 col-md-12 d-flex align-items-center">
+                        <div>
+                            <h1 class="text-custom2">Food Packaging</h1>
+                            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse eum nobis. Maiores fugit accusamus sed excepturi, mollitia dicta laboriosam quaerat nam molestiae asperiores consequuntur animi.</p>
+                            <a href="#" class="text-decoration-none text-custom btn btn-custom1" class="btn btn-custom1 text-custom fs-4 mt-2">Learn More</a>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-8 col-md-12 d-flex justify-content-center">
+                        <img src="../../../assets/img/sample_img.webp" alt="" class="img-fluid border rounded">
+                    </div>
+                </div>
+            </div>
+
+            <!-- nav carousel -->
+            <div class="slick-container mt-2 mb-5" data-aos="fade-up" data-aos-delay="200">
+                <div class="px-5">
+                    <h2>Category<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#helpModal"><i class="fs-5 bi bi-question-circle-fill"></i></button><h2>
+                </div>
+                <div class="wrapper">
+                    <div class="carousel">
+                        <div class="text-center carousel-item" data-product="paperCups"><div class="text-decoration-none text-black"><img src="../../../assets/img/Product Img.webp" alt="Paper Cups"><h5 class="lead-custom1">Paper Cups</h5></div></div>
+                        <div class="text-center carousel-item" data-product="paperBowls"><div class="text-decoration-none text-black"><img src="../../../assets/img/Product Img.webp" alt="Paper Bowls"><h5 class="lead-custom1">Paper Bowls</h5></div></div>
+                        <div class="text-center carousel-item" data-product="mealBoxes"><div class="text-decoration-none text-black"><img src="../../../assets/img/Product Img.webp" alt="Meal Boxes"><h5 class="lead-custom1">Meal Boxes</h5></div></div>
+                        <div class="text-center carousel-item" data-product="clamShells"><div class="text-decoration-none text-black"><img src="../../../assets/img/Product Img.webp" alt="Clam Shells"><h5 class="lead-custom1">Clam Shells</h5></div></div>
+                        <div class="text-center carousel-item" data-product="pastryBoxes"><div class="text-decoration-none text-black"><img src="../../../assets/img/Product Img.webp" alt="Pastry Boxes"><h5 class="lead-custom1">Pastry Boxes</h5></div></div>
+                        <div class="text-center carousel-item" data-product="foodWrappers"><div class="text-decoration-none text-black"><img src="../../../assets/img/Product Img.webp" alt="Food Wrappers"><h5 class="lead-custom1">Food Wrappers</h5></div></div>
+                        <div class="text-center carousel-item" data-product="paperBags"><div class="text-decoration-none text-black"><img src="../../../assets/img/Product Img.webp" alt="Paper Bags"><h5 class="lead-custom1">Paper Bags</h5></div></div>
+                        <div class="text-center carousel-item" data-product="cupSleeves"><div class="text-decoration-none text-black"><img src="../../../assets/img/Product Img.webp" alt="Cup Sleeves"><h5 class="lead-custom1">Cup Sleeves</h5></div></div>
+                    </div>
+                      
+                </div>
+            </div>
+
+            <br><br>
+            <br><br>
+            <br><br>
+            
+            <!-- All Products(sorted if clicked) -->
+            <div class="px-5 text-center">
+                <h2 class="text-custom2">Our Products</h2>
+            </div>
+            <div id="productsView" class="container mt-5">
+                <!-- Sample section(copy and paste) -->
+                <div id="" class="d-none">
+                    <div class="text-center"><h4>-----#-----</h4></div>
+                    <div class="row g-5 mt-1">
+
+                    </div>
+                </div>
+
+                <!-- Paper cups -->
+                <div id="paperCups" class="">
+                    <div class="text-center"><h4>-----Paper Cups-----</h4></div>
+                    <div class="row g-5 mt-1">
+                        <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
+                            <div class="card product-card border-custom" style="width: 18rem;">
+                                <img src="../../../assets/img/Product Img.webp" class="card-img-top img-fluid" alt="...">
+                                <div class="card-body text-center">
+                                    <p class="lead-custom">Paper Cups 4oz</p>
+                                    <button class="mb-3 text-custom btn btn-custom1" onclick="getProdName('Paper Cups 4oz')">Inquire</button>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
+                            <div class="card product-card border-custom" style="width: 18rem;">
+                                <img src="../../../assets/img/Product Img.webp" class="card-img-top img-fluid" alt="...">
+                                <div class="card-body text-center">
+                                    <p class="lead-custom">Paper Cups 4oz</p>
+                                    <button class="mb-3 text-custom btn btn-custom1" onclick="getProdName('Paper Cups 6oz')">Inquire</button>
+                                </div>
+                            </div>
+                        </div>
+    
+                        
+                        <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
+                            <div class="card product-card border-custom" style="width: 18rem;">
+                                <img src="../../../assets/img/Product Img.webp" class="card-img-top img-fluid" alt="...">
+                                <div class="card-body text-center">
+                                    <p class="lead-custom">Paper Cups 8oz</p>
+                                    <button class="mb-3 text-custom btn btn-custom1" onclick="getProdName('Paper Cups 8oz')">Inquire</button>
+                                </div>
+                            </div>
+                        </div>
+    
+                        
+                        <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
+                            <div class="card product-card border-custom" style="width: 18rem;">
+                                <img src="../../../assets/img/Product Img.webp" class="card-img-top img-fluid" alt="...">
+                                <div class="card-body text-center">
+                                    <p class="lead-custom">Paper Cups 16oz</p>
+                                    <button class="mb-3 text-custom btn btn-custom1" onclick="getProdName('Paper Cups 16oz')">Inquire</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Custom width to fit -->
+                        <div class="custom-col"></div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
+                            <div class="card product-card border-custom" style="width: 18rem;">
+                                <img src="../../../assets/img/Product Img.webp" class="card-img-top img-fluid" alt="...">
+                                <div class="card-body text-center">
+                                    <p class="lead-custom">Paper Cups 22oz</p>
+                                    <button class="mb-3 text-custom btn btn-custom1" onclick="getProdName('Paper Cups 22oz')">Inquire</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
+                            <div class="card product-card border-custom" style="width: 18rem;">
+                                <img src="../../../assets/img/Product Img.webp" class="card-img-top img-fluid" alt="...">
+                                <div class="card-body text-center">
+                                    <p class="lead-custom">Paper Cups 12oz 80D</p>
+                                    <button class="mb-3 text-custom btn btn-custom1" onclick="getProdName('Paper Cups 12oz 80D')">Inquire</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="custom-col1 d-none"></div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
+                            <div class="card product-card border-custom" style="width: 18rem;">
+                                <img src="../../../assets/img/Product Img.webp" class="card-img-top img-fluid" alt="...">
+                                <div class="card-body text-center">
+                                    <p class="lead-custom">Paper Cups 12oz 90D</p>
+                                    <button class="mb-3 text-custom btn btn-custom1" onclick="getProdName('Paper Cups 12oz 90D')">Inquire</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+
+                <!-- Paper Bowls -->
+                <div id="paperBowls" class="d-none mt-5">
+                    <div class="text-center"><h4>-----Paper Bowls-----</h4></div>
+                    <div class="row g-5 mt-1">
+                        <!-- Custom width to fit -->
+                        <div class="custom-col"></div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
+                            <div class="card product-card border-custom" style="width: 18rem;">
+                                <img src="../../../assets/img/Product Img.webp" class="card-img-top img-fluid" alt="...">
+                                <div class="card-body text-center">
+                                    <p class="lead-custom">Paper Bowl 260cc</p>
+                                    <button class="mb-3 text-custom btn btn-custom1" onclick="getProdName('Paper Bowl 260cc')">Inquire</button>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
+                            <div class="card product-card border-custom" style="width: 18rem;">
+                                <img src="../../../assets/img/Product Img.webp" class="card-img-top img-fluid" alt="...">
+                                <div class="card-body text-center">
+                                    <p class="lead-custom">Paper Bowl 390cc</p>
+                                    <button class="mb-3 text-custom btn btn-custom1" onclick="getProdName('Paper Bowl 390cc')">Inquire</button>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
+                            <div class="card product-card border-custom" style="width: 18rem;">
+                                <img src="../../../assets/img/Product Img.webp" class="card-img-top img-fluid" alt="...">
+                                <div class="card-body text-center">
+                                    <p class="lead-custom">Paper Bowl 520cc</p>
+                                    <button class="mb-3 text-custom btn btn-custom1" onclick="getProdName('Paper Bowl 520cc')">Inquire</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Custom width to fit -->
+                        <div class="custom-col"></div>
+
+                        <div class="col-3 page-custom-col"></div>
+    
+
+                        <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
+                            <div class="card product-card border-custom" style="width: 18rem;">
+                                <img src="../../../assets/img/Product Img.webp" class="card-img-top img-fluid" alt="...">
+                                <div class="card-body text-center">
+                                    <p class="lead-custom">Paper Bowl 550cc</p>
+                                    <button class="mb-3 text-custom btn btn-custom1" onclick="getProdName('Paper Bowl 550cc')">Inquire</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div> 
+                </div>
+
+                <!-- Meal Boxes -->
+                <div id="mealBoxes" class="d-none mt-5">
+                    <div class="text-center"><h4>-----Meal Boxes-----</h4></div>
+                    <div class="row g-5 mt-1">
+                        <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
+                            <div class="card product-card border-custom" style="width: 18rem;">
+                                <img src="../../../assets/img/Product Img.webp" class="card-img-top img-fluid" alt="...">
+                                <div class="card-body text-center">
+                                    <p class="lead-custom">Meal Box BHS-1</p>
+                                    <button class="mb-3 text-custom btn btn-custom1" onclick="getProdName('Meal Box BHS-1')">Inquire</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
+                            <div class="card product-card border-custom" style="width: 18rem;">
+                                <img src="../../../assets/img/Product Img.webp" class="card-img-top img-fluid" alt="...">
+                                <div class="card-body text-center">
+                                    <p class="lead-custom">Meal Box BHS-2</p>
+                                    <button class="mb-3 text-custom btn btn-custom1" onclick="getProdName('Meal Box BHS-2')">Inquire</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
+                            <div class="card product-card border-custom" style="width: 18rem;">
+                                <img src="../../../assets/img/Product Img.webp" class="card-img-top img-fluid" alt="...">
+                                <div class="card-body text-center">
+                                    <p class="lead-custom">Meal Box BHS-3</p>
+                                    <button class="mb-3 text-custom btn btn-custom1" onclick="getProdName('Meal Box BHS-3')">Inquire</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
+                            <div class="card product-card border-custom" style="width: 18rem;">
+                                <img src="../../../assets/img/Product Img.webp" class="card-img-top img-fluid" alt="...">
+                                <div class="card-body text-center">
+                                    <p class="lead-custom">Meal Box BHS-4</p>
+                                    <button class="mb-3 text-custom btn btn-custom1" onclick="getProdName('Meal Box BHS-4')">Inquire</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-3 page-custom-col"></div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
+                            <div class="card product-card border-custom" style="width: 18rem;">
+                                <img src="../../../assets/img/Product Img.webp" class="card-img-top img-fluid" alt="...">
+                                <div class="card-body text-center">
+                                    <p class="lead-custom">Meal Box BHS-5</p>
+                                    <button class="mb-3 text-custom btn btn-custom1" onclick="getProdName('Meal Box BHS-5')">Inquire</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
+                            <div class="card product-card border-custom" style="width: 18rem;">
+                                <img src="../../../assets/img/Product Img.webp" class="card-img-top img-fluid" alt="...">
+                                <div class="card-body text-center">
+                                    <p class="lead-custom">Chicken Carrier</p>
+                                    <button class="mb-3 text-custom btn btn-custom1" onclick="getProdName('Chicken Carrier')">Inquire</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Clam Shells -->
+                <div id="clamShells" class="d-none">
+                    <div class="text-center"><h4>-----Clam Shells-----</h4></div>
+                    <div class="row g-5 mt-1">
+                        <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
+                            <div class="card product-card border-custom" style="width: 18rem;">
+                                <img src="../../../assets/img/Product Img.webp" class="card-img-top img-fluid" alt="...">
+                                <div class="card-body text-center">
+                                    <p class="lead-custom">Hotdog Box</p>
+                                    <button class="mb-3 text-custom btn btn-custom1" onclick="getProdName('Hotdog Box')">Inquire</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
+                            <div class="card product-card border-custom" style="width: 18rem;">
+                                <img src="../../../assets/img/Product Img.webp" class="card-img-top img-fluid" alt="...">
+                                <div class="card-body text-center">
+                                    <p class="lead-custom">Burger Box</p>
+                                    <button class="mb-3 text-custom btn btn-custom1" onclick="getProdName('Burger Box')">Inquire</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
+                            <div class="card product-card border-custom" style="width: 18rem;">
+                                <img src="../../../assets/img/Product Img.webp" class="card-img-top img-fluid" alt="...">
+                                <div class="card-body text-center">
+                                    <p class="lead-custom">BGL-1</p>
+                                    <button class="mb-3 text-custom btn btn-custom1" onclick="getProdName('BGL-1')">Inquire</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
+                            <div class="card product-card border-custom" style="width: 18rem;">
+                                <img src="../../../assets/img/Product Img.webp" class="card-img-top img-fluid" alt="...">
+                                <div class="card-body text-center">
+                                    <p class="lead-custom">BGL-2</p>
+                                    <button class="mb-3 text-custom btn btn-custom1" onclick="getProdName('BGL-2')">Inquire</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Pastry Boxes -->
+                <div id="pastryBoxes" class="d-none">
+                    <div class="text-center"><h4>-----Pastry Boxes-----</h4></div>
+                    <div class="row g-5 mt-1">
+                        <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
+                            <div class="card product-card border-custom" style="width: 18rem;">
+                                <img src="../../../assets/img/Product Img.webp" class="card-img-top img-fluid" alt="...">
+                                <div class="card-body text-center">
+                                    <p class="lead-custom">Donut Box 6s</p>
+                                    <button class="mb-3 text-custom btn btn-custom1" onclick="getProdName('Donut Box 6s')">Inquire</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
+                            <div class="card product-card border-custom" style="width: 18rem;">
+                                <img src="../../../assets/img/Product Img.webp" class="card-img-top img-fluid" alt="...">
+                                <div class="card-body text-center">
+                                    <p class="lead-custom">Donut Box 12s</p>
+                                    <button class="mb-3 text-custom btn btn-custom1" onclick="getProdName('Donut Box 12s')">Inquire</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
+                            <div class="card product-card border-custom" style="width: 18rem;">
+                                <img src="../../../assets/img/Product Img.webp" class="card-img-top img-fluid" alt="...">
+                                <div class="card-body text-center">
+                                    <p class="lead-custom">Pie Box W/ PVC</p>
+                                    <button class="mb-3 text-custom btn btn-custom1" onclick="getProdName('Pie Box W/ PVC')">Inquire</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
+                            <div class="card product-card border-custom" style="width: 18rem;">
+                                <img src="../../../assets/img/Product Img.webp" class="card-img-top img-fluid" alt="...">
+                                <div class="card-body text-center">
+                                    <p class="lead-custom">Small Pastry Box W/ PVC</p>
+                                    <button class="mb-3 text-custom btn btn-custom1" onclick="getProdName('Small Pastry Box W/ PVC')">Inquire</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Custom width to fit -->
+                        <div class="col-3 page-custom-col"></div>
+                        <div class="custom-col"></div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
+                            <div class="card product-card border-custom" style="width: 18rem;">
+                                <img src="../../../assets/img/Product Img.webp" class="card-img-top img-fluid" alt="...">
+                                <div class="card-body text-center">
+                                    <p class="lead-custom">Cake Box</p>
+                                    <button class="mb-3 text-custom btn btn-custom1" onclick="getProdName('Cake Box')">Inquire</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Food Wrappers -->
+                <div id="foodWrappers" class="d-none">
+                    <div class="text-center"><h4>-----Food Wrappers-----</h4></div>
+                    <div class="row g-5 mt-1">
+                        <!-- Custom width to fit -->
+                        <div class="col-3 page-custom-col"></div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
+                            <div class="card product-card border-custom" style="width: 18rem;">
+                                <img src="../../../assets/img/Product Img.webp" class="card-img-top img-fluid" alt="...">
+                                <div class="card-body text-center">
+                                    <p class="lead-custom">Flat-Type Wrapper</p>
+                                    <button class="mb-3 text-custom btn btn-custom1" onclick="getProdName('Flat-Type Wrapper')">Inquire</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
+                            <div class="card product-card border-custom" style="width: 18rem;">
+                                <img src="../../../assets/img/Product Img.webp" class="card-img-top img-fluid" alt="...">
+                                <div class="card-body text-center">
+                                    <p class="lead-custom">L-Type Wrapper</p>
+                                    <button class="mb-3 text-custom btn btn-custom1" onclick="getProdName('L-Type Wrapper')">Inquire</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paper Bags -->
+                <div id="paperBags" class="d-none">
+                    <div class="text-center"><h4>-----Paper Bags-----</h4></div>
+                    <div class="row g-5 mt-1">
+                        <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
+                            <div class="card product-card border-custom" style="width: 18rem;">
+                                <img src="../../../assets/img/Product Img.webp" class="card-img-top img-fluid" alt="...">
+                                <div class="card-body text-center">
+                                    <p class="lead-custom">#4 SOS Bag</p>
+                                    <button class="mb-3 text-custom btn btn-custom1" onclick="getProdName('4 SOS Bag')">Inquire</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
+                            <div class="card product-card border-custom" style="width: 18rem;">
+                                <img src="../../../assets/img/Product Img.webp" class="card-img-top img-fluid" alt="...">
+                                <div class="card-body text-center">
+                                    <p class="lead-custom">#8 SOS Bag</p>
+                                    <button class="mb-3 text-custom btn btn-custom1" onclick="getProdName('8 SOS Bag')">Inquire</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
+                            <div class="card product-card border-custom" style="width: 18rem;">
+                                <img src="../../../assets/img/Product Img.webp" class="card-img-top img-fluid" alt="...">
+                                <div class="card-body text-center">
+                                    <p class="lead-custom">#12 SOS Bag</p>
+                                    <button class="mb-3 text-custom btn btn-custom1" onclick="getProdName('12 SOS Bag')">Inquire</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
+                            <div class="card product-card border-custom" style="width: 18rem;">
+                                <img src="../../../assets/img/Product Img.webp" class="card-img-top img-fluid" alt="...">
+                                <div class="card-body text-center">
+                                    <p class="lead-custom">Satchel Bag</p>
+                                    <button class="mb-3 text-custom btn btn-custom1" onclick="getProdName('Satchel Bag')">Inquire</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Cup Sleeves) -->
+                <div id="cupSleeves" class="d-none">
+                    <div class="text-center"><h4>-----Cup Sleeves-----</h4></div>
+                    <div class="row g-5 mt-1">
+                        <!-- custom width to fit -->
+                        <div class="custom-col"></div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
+                            <div class="card product-card border-custom" style="width: 18rem;">
+                                <img src="../../../assets/img/Product Img.webp" class="card-img-top img-fluid" alt="...">
+                                <div class="card-body text-center">
+                                    <p class="lead-custom">Coffee Sleeve</p>
+                                    <button class="mb-3 text-custom btn btn-custom1" onclick="getProdName('Coffee Sleeve')">Inquire</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
+                            <div class="card product-card border-custom" style="width: 18rem;">
+                                <img src="../../../assets/img/Product Img.webp" class="card-img-top img-fluid" alt="...">
+                                <div class="card-body text-center">
+                                    <p class="lead-custom">Air Holder</p>
+                                    <button class="mb-3 text-custom btn btn-custom1" onclick="getProdName('Air Holder')">Inquire</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
+                            <div class="card product-card border-custom" style="width: 18rem;">
+                                <img src="../../../assets/img/Product Img.webp" class="card-img-top img-fluid" alt="...">
+                                <div class="card-body text-center">
+                                    <p class="lead-custom">Take Away Cup Holder</p>
+                                    <button class="mb-3 text-custom btn btn-custom1" onclick="getProdName('Take Away Cup Holder')">Inquire</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </main>
+    </div>
+
+    <br><br><br><br>
+    <br><br><br><br>
+
+  
+    <!-- Help Modal -->
+    <div class="modal fade" id="helpModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Help Section <i class="bi bi-info-circle-fill text-success"></i></h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>1.) Scroll through the category navigation bar to sort the products you want to see.</p>
+                    <p>2.) Selected category will be highlighted in the navigation bar to help you know which product is shown.</p>
+                    <p>3.) Click on Inquire to direct you to our product inquiry form.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer(Reusable components) -->
+    <footer id="footer" class="footer"></footer>
+
+
+    <!-- Bootstrap 5.3.3 JS Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Data AOS JS CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Slick JS -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+
+    <!-- For navbar toggle animation -->
+     <script src="../_components/toggleNavbar.js"></script>
+
+     <!-- Components js -->
+    <script src="../_components/componentLoader.js"></script>
+
+    <!-- Page script -->
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+        });
+
+        // Function to show the corresponding product view based on the selected product
+        function selectedProductView(prodName) {
+            const allProducts = $('#productsView > div'); // Get all product divs
+            const selectedProductDiv = $(`#${prodName}`);
+            
+            // Hide all products initially and apply the fade-out effect
+            allProducts.not(selectedProductDiv).fadeOut(300).addClass('d-none');
+            
+            // Show the selected product, ensuring it fades in
+            selectedProductDiv.fadeIn(300).removeClass('d-none');
+        }
+
+        // Function to redirect to product inquire form
+        function getProdName(prodName) {
+            sessionStorage.setItem('activeProd', prodName);
+            console.log(sessionStorage.getItem('activeProd'));
+            window.location.href = "./productInquire.html";
+
+        }
+
+        // Carousel Slick Algorithm
+        $('.carousel').slick({
+            slidesToShow: 5,
+            dots: true,
+            centerMode: true,
+            swipe: false, // Disable touch swiping
+            focusOnSelect: true, // Enable the ability to select an item when clicked
+
+            responsive: [
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 3
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                },
+                {
+                    breakpoint: 536,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+
+        // Event listener to update the displayed product when the active (center) slide changes
+        $('.carousel').on('afterChange', function(event, slick, currentSlide){
+            // Get the data attribute from the active slide
+            const selectedProduct = $(slick.$slides[currentSlide]).data('product');
+            console.log("Active Product: ", selectedProduct);
+            
+            // Call the function to show the corresponding product
+            selectedProductView(selectedProduct);
+        });
+        
+        $(document).ready(function(){
+            sessionStorage.clear();
+        });
+    </script>
+    
+</body>
+</html>

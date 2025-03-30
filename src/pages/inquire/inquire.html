@@ -1,0 +1,183 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Tree Inquire</title>
+    <link rel="icon" href="../../../assets/img/fav-logo.png" type="image/webp">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Bootstrap 5.3.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Main css -->
+    <link rel="stylesheet" href="../../css/main.css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Data AOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <style>
+        b {
+            font-weight: 700 !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-wrapper">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light navbar-custom-bg">
+            <div class="container-fluid nav-container">
+                <a class="navbar-brand d-flex justify-content-center align-items-center" href="../../../index.html">
+                    <img src="../../../assets/img/fav-logo1.png" alt="" class="img-fluid nav-logo">
+                    <h2 class="nav-heading text-custom">Colortree</h2>
+                </a>
+                <button class="navbar-toggler" id="navbarToggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i id="toggleIcon" class="fas fa-bars text-custom"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item dropdown m-0">
+                        <li class="nav-item"><a id="faq" class="nav-link mx-2 fs-5 text-custom" href="../../../index.html">Home</a></li>
+                        <li class="nav-item dropdown m-0">
+                            <a class="nav-link dropdown-toggle fs-5 mx-2 text-custom" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                            <ul class="dropdown-menu">
+                                <li><a id="food" class="dropdown-item" href="../services/food.html">Food Packaging</a></li>
+                                <li><a id="industrial" class="dropdown-item" href="../services/industrial.html">Industrial Packaging</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a id="inquire" class="nav-link mx-2 fs-5 text-custom active-nav-link" href="./inquire.html">Inquire</a></li>
+                        <li class="nav-item"><a id="inquire" class="nav-link mx-2 fs-5 text-custom" href="../hiring/hiring.html">Hiring</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <br><br><br>
+        <!-- Body content -->
+        <main class="mt-5 mb-5">
+            <div class="container">
+                <div class="row">
+                    <!-- info maps section -->
+                    <div class="col-lg-6 col-md-12 p-3 px-5" data-aos="fade-up">
+                        <div class="mb-5">
+                            <p class="lead text-custom2">Inquiries?</p>
+                            <h1 class="text-custom2 fs-hero3">We'd Love to Hear From You</h1>
+                            <p class="lead">Our sales and support team are happy to answer your textline inquiries.</p>
+                        </div>
+
+                        <div>
+                            <p class="lead fs-hero2"><b>For Sales: </b>09478063219</p>
+                            <p class="lead fs-hero2"><b>For Support: </b>+123-456-789</p>
+                            <p class="lead fs-hero2"><b>Email: </b>marketing02@colortree.com.ph</p>
+                            <p class="lead fs-hero2"><b>Address: </b>Lot 3-5, Block 8, Phase 2, Mountview Industrial Complex, Carmona, Cavite</p>
+                        </div>
+
+                        <div class="text-center">
+                            <a class="text-custom1" target="_blank" href="https://www.google.com/maps/place/Colortree+Label+Corporation/@14.2887368,121.0172677,19z/data=!4m6!3m5!1s0x3397d63c0875e76f:0xa75432f6bc1d165f!8m2!3d14.2894062!4d121.0163801!16s%2Fg%2F11dx8hcp8_?entry=ttu&g_ep=EgoyMDI0MTExMy4xIKXMDSoASAFQAw%3D%3D">
+                                See in maps<i class="bi bi-box-arrow-in-up-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Form section -->
+                    <div class="col-lg-6 col-md-12" data-aos="fade-up" data-aos-delay="200">
+                        <form inquireForm class="border p-3 rounded bg-light">
+                            <!-- 1st row name, email -->
+                            <div class="row mb-2">
+                                <div class="col-lg-6 col-md-12">
+                                    <label for="name">Full Name:</label>
+                                    <input type="text" name="name" id="name" class="form-control rounded-0" required>
+                                </div>
+
+                                <div class="col-lg-6 col-md-12">
+                                    <label for="email">Email:</label>
+                                    <input type="text" name="email" id="email" class="form-control rounded-0" required>
+                                </div>
+                            </div>
+                        
+                            <!-- 2nd row subject, phone num -->
+                            <div class="row mb-2">
+                                <div class="col-lg-6 col-md-12">
+                                    <label for="subject">Subject:</label>
+                                    <input type="text" name="subject" id="subject" class="form-control rounded-0" required>
+                                </div>
+                        
+                                <div class="col-lg-6 col-md-12">
+                                    <label for="contact">Phone Number:</label>
+                                    <input type="text" name="contact" id="contact" class="form-control rounded-0" required>
+                                </div>
+                            </div>
+                        
+                            <!-- Message row -->
+                            <div class="row mb-2">
+                                <div class="col-12">
+                                    <label for="mssg">Message:</label>
+                                    <textarea name="mssg" id="mssg" rows="10" class="form-control rounded-0" required></textarea>
+                                </div>
+                            </div>
+                        
+                            <!-- Terms and Conditions row -->
+                            <div class="row mb-2">
+                                <div class="col-12">
+                                    <label for="terms" class="d-inline-block">
+                                        <input type="checkbox" name="terms" id="terms" required>
+                                        I agree to the following Terms and Conditions:
+                                    </label>
+                                    <p class="mt-2">
+                                        By submitting this form, you agree to our terms and conditions. These terms include (but are not limited to) our data privacy policy, user responsibilities, and liability limitations.
+                                    </p>
+                                </div>
+                            </div>
+                        
+                            <!-- Submit button -->
+                            <div class="row mb-2">
+                                <div class="col-12 text-center">
+                                    <button type="submit" class="btn btn-custom1 text-custom">Submit</button>
+                                </div>
+                            </div>
+                        
+                        </form>
+                        
+                        
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer(Reusable components) -->
+    <footer id="footer" class="footer"></footer>
+
+
+    <!-- Bootstrap 5.3.3 JS Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Data AOS JS CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- For navbar toggle animation -->
+     <script src="../_components/toggleNavbar.js"></script>
+
+     <!-- Components js -->
+      <script src="../_components/componentLoader.js"></script>
+
+    <!-- Page script -->
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+        });
+
+
+
+    </script>
+</body>
+</html>

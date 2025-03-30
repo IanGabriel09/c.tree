@@ -1,0 +1,439 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Tree Services</title>
+    <link rel="icon" href="../../../assets/img/fav-logo.png" type="image/webp">
+
+    <!-- Slick CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Bootstrap 5.3.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!-- Main css -->
+    <link rel="stylesheet" href="../../css/main.css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Data AOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <style>
+        i {
+            font-size: small;
+        }
+        label {
+            font-weight: bold;
+        }
+        #hiddenRow {
+            display: none;
+        }
+        #inquireForm, #confirmationForm {
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        }
+        .product-img {
+            width: 75vh;
+            height: auto;
+        }
+        @media (max-width: 992px) {
+            .custom-reverse {
+                display: flex;
+                flex-wrap: wrap-reverse;
+
+            }
+            /* .product-img {
+                height: auto !important;
+            } */
+        }
+    </style>
+</head>
+<body>
+    <div class="container-wrapper">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light navbar-custom-bg">
+            <div class="container-fluid nav-container">
+                <a class="navbar-brand d-flex justify-content-center align-items-center" href="../../../index.html">
+                    <img src="../../../assets/img/fav-logo1.png" alt="" class="img-fluid nav-logo">
+                    <h2 class="nav-heading text-custom">Colortree</h2>
+                </a>
+                <button class="navbar-toggler" id="navbarToggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i id="toggleIcon" class="fas fa-bars text-custom"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item dropdown m-0">
+                        <li class="nav-item"><a id="faq" class="nav-link mx-2 fs-5 text-custom" href="../../../index.html">Home</a></li>
+                        <li class="nav-item dropdown m-0">
+                            <a class="nav-link dropdown-toggle fs-5 mx-2 active-nav-link text-custom" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                            <ul class="dropdown-menu">
+                                <li><a id="food" class="dropdown-item active-service" href="./food.html">Food Packaging</a></li>
+                                <li><a id="industrial" class="dropdown-item" href="./industrial.html">Industrial Packaging</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a id="inquire" class="nav-link mx-2 fs-5 text-custom" href="../inquire/inquire.html">Inquire</a></li>
+                        <li class="nav-item"><a id="inquire" class="nav-link mx-2 fs-5 text-custom" href="../hiring/hiring.html">Hiring</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <br><br>
+
+        <!-- Body content -->
+        <main class="mt-5 mb-5">
+            <div class="container">
+                <div class="row custom-reverse h-100">
+                    <!-- Form Input container -->
+                    <div id="formContainer" class="col-lg-5 col-md-12 d-flex justify-content-center align-items-center" data-aos="fade-up">
+                        <form id="inquireForm" class="p-2 bg-custom rounded">
+                            <div class="row p-3">
+                                <h3 class="mb-3 lead-custom1">Inquire Form</h3>
+                                <!-- 1st row Material -->
+                                <div class="col-12 mb-3">
+                                    <label for="material">Material</label>
+                                    <select name="material" id="material" class="form-select">
+                                        <option selected disabled>--Select--</option>
+                                    </select>
+                                </div>
+
+                                <!-- hidden row -->
+                                <div id="hiddenRow" class="col-12 mb-3">
+                                    <label for="customMat">Custom Material:</label>
+                                    <textarea name="customMat" id="customMat" rows="5" class="form-control"></textarea>
+                                </div>
+                                
+                                <!-- 2nd row color, quantity -->
+                                <div class="col-lg-6 col-md-12 mb-3">
+                                    <label for="color">Color</label>
+                                    <select name="color" id="color" class="form-select">
+                                        <option selected disabled>--Select--</option>
+                                        <option value="color-1">color-1</option>
+                                        <option value="color-2">color-2</option>
+                                        <option value="color-3">color-3</option>
+                                        <option value="color-4">color-4</option>
+                                        <option value="color-5">color-5</option>
+                                        <option value="color-6">color-6</option>  
+                                    </select>
+                                </div>  
+
+                                <div class="col-lg-6 col-md-12 mb-3">
+                                    <label for="quantity">Quantity</label>
+                                    <input type="number" id="quantity" name="quantity" class="form-control" placeholder="input">
+                                </div>
+
+                                <!-- 3rd row last name -->
+                                <div class="col-12 mb-3">
+                                    <label for="lastName">Last Name:</label>
+                                    <input type="text" id="lastName" name="lastName" class="form-control" placeholder="Last Name">
+                                </div>
+
+                                <!-- 4th row firstname -->
+                                <div class="col-12 mb-3">
+                                    <label for="firstName">First Name:</label>
+                                    <input type="text" id="firstName" name="firstName" class="form-control" placeholder="First Name">
+                                </div>
+
+                                <!-- 5th row email address -->
+                                <div class="col-12 mb-3">
+                                    <label for="email">Email Address:</label>
+                                    <input type="text" id="email" name="email" class="form-control" placeholder="Email Address">
+                                </div>
+
+                                <!-- last row contact no. -->
+                                <div class="col-12 mb-3">
+                                    <label for="contact">Contact Number:</label>
+                                    <input type="text" id="contact" name="contact" class="form-control" placeholder="Contact No.">
+                                </div>
+
+                                <div class="col-12 text-center mb-3">
+                                    <button type="submit" id="nextBtn" class="btn btn-custom1 text-custom">Next</button>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Confirmation input container -->
+                    <div id="confirmationContainer" class="col-lg-5 col-md-12 d-flex justify-content-center align-items-center d-none">
+                        <div id="confirmationForm" class="p-2 bg-custom rounded">
+                            <div class="row p-3">
+                                <h3 class="mb-3 lead-custom1">Confirmation</h3>
+                                
+                                <!-- 1st row Material -->
+                                <div class="col-12 mb-3">
+                                    <p class="lead fw-bold text-custom1 m-0">Material:</p>
+                                    <i id="materialConfirm" class="fw-normal">Default Text</i>
+                                </div>
+
+                                <!-- 2nd row Custom material -->
+                                <div class="col-12 mb-3">
+                                    <p class="lead fw-bold text-custom1 m-0">Custom Material:</p>
+                                    <i id="customMatConfirm" class="fw-normal">Default Text</i>
+                                </div>
+
+                                <!-- 3rd row Color -->
+                                <div class="col-12 mb-3">
+                                    <p class="lead fw-bold text-custom1 m-0">Color:</p>
+                                    <i id="colorConfirm" class="fw-normal">Default Text</i>
+                                </div>
+
+                                <!-- 4th row Quantity -->
+                                <div class="col-12 mb-3">
+                                    <p class="lead fw-bold text-custom1 m-0">Quantity:</p>
+                                    <i id="quantityConfirm" class="fw-normal">Default Text</i>
+                                </div>
+
+                                <!-- 5th row Last Name -->
+                                <div class="col-12 mb-3">
+                                    <p class="lead fw-bold text-custom1 m-0">Last Name:</p>
+                                    <i id="LNameConfirm" class="fw-normal">Default Text</i>
+                                </div>
+
+                                <!-- 6th row First Name -->
+                                <div class="col-12 mb-3">
+                                    <p class="lead fw-bold text-custom1 m-0">First Name:</p>
+                                    <i id="FNameConfirm" class="fw-normal">Default Text</i>
+                                </div>
+
+                                <!-- 7th row Email Address -->
+                                <div class="col-12 mb-3">
+                                    <p class="lead fw-bold text-custom1 m-0">Email Address:</p>
+                                    <i id="emailConfirm" class="fw-normal">Default Text</i>
+                                </div>
+
+                                <!-- 8th row Contact -->
+                                <div class="col-12 mb-3">
+                                    <p class="lead fw-bold text-custom1 m-0">Contact:</p>
+                                    <i id="contactConfirm" class="fw-normal">Default Text</i>
+                                </div>
+
+                                <!-- submit/back -->
+                                <div class="d-flex mt-4">
+                                    <div class="w-50 m-2">
+                                        <button id="backButton" class="w-100 fs-5 btn btn-custom1 text-custom">Back</button>
+                                    </div>
+    
+                                    <div class="w-50 m-2">
+                                        <button id="submitInq" class="w-100 fs-5 btn btn-custom1 text-custom">Submit Inquiry</button>
+                                    </div>
+    
+    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- product img container -->
+                    <div id="imgContainer" class="col-lg-7 col-md-12 d-flex justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="200">
+                        <div class="">
+                            <div class="text-center">
+                                <h2 id="productLabel"></h2>
+                            </div>
+                            <img src="https://placehold.co/600x400?text=Default Pic" alt="" id="productImg" class="img-fluid product-img">
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <br><br>
+    <br><br>
+    <br><br>
+    <br>
+
+    <!-- Empty fields modal -->
+    <div class="modal fade" id="emptyFieldModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Empty Fields Alert <i class="bi bi-exclamation-triangle-fill text-danger"></i></h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Please fill in all fields to continue</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal negative fields -->
+    <div class="modal fade" id="negativeFieldModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Error Input Alert <i class="bi bi-exclamation-triangle-fill text-danger"></i></h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modalMessageBody">
+                    Please input a number greater than 1 in Quantity field.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="modalBtn" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- confirmation Modal -->
+    <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Send Inquiry?</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Once sent, your inquiry will be forwarded to our own database servers. Please wait 3 - 5 business days for a reply regarding your inquiry.</p>
+                    <i>(Note: This is only a test, please disregard if you see this modal pop up)</i>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success" onclick="confirmSubmit()">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer(Reusable components) -->
+    <footer id="footer" class="footer"></footer>
+
+
+    <!-- Bootstrap 5.3.3 JS Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Data AOS JS CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Slick JS -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+
+    <!-- For navbar toggle animation -->
+     <script src="../_components/toggleNavbar.js"></script>
+
+     <!-- Components js -->
+    <script src="../_components/componentLoader.js"></script>
+    
+    <!-- script for fetching related materials -->
+    <script src="./fetchMaterial.js"></script>
+
+    <!-- Page script -->
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+        });
+
+        // Input fields as variables
+        let material, customMat, color, quantity, lName, fName, email, contact;
+
+        // Form next btn event
+        $('#nextBtn').on('click', function(e) {
+            e.preventDefault();
+
+            // Retrieve input values inside the function
+            material = $('#material').val();
+            customMat = $('#customMat').val();
+            color = $('#color').val();
+            quantity = $('#quantity').val();
+            lName = $('#lastName').val();
+            fName = $('#firstName').val();
+            email = $('#email').val();
+            contact = $('#contact').val();
+
+            // Prevents next Btn event when a field is empty
+            if (!material || !color || !quantity || !lName || !fName || !email || !contact) {
+                $('#emptyFieldModal').modal('show');
+                return;
+            } else if (material === 'Others' && !customMat) {
+                $('#emptyFieldModal').modal('show');
+                return;
+            } else if (quantity < 1) {
+                $('#negativeFieldModal').modal('show');
+                return;
+            }
+
+            // Populate confirmation section
+            $('#materialConfirm').text(material);
+            $('#customMatConfirm').text(customMat ? customMat : 'N/A');
+            $('#colorConfirm').text(color);
+            $('#quantityConfirm').text(quantity);
+            $('#LNameConfirm').text(lName);
+            $('#FNameConfirm').text(fName);
+            $('#emailConfirm').text(email);
+            $('#contactConfirm').text(contact);
+
+            console.log(lName, material);
+
+            // Hide the entire form container
+            $('#formContainer').fadeOut().addClass('d-none');
+            $('#confirmationContainer').fadeIn().removeClass('d-none');
+        });
+
+        // Show custom mat field
+        $('#material').on('change', function() {
+            let hiddenRow = $('#hiddenRow');
+            let selectedMat = $('#material').val();
+            $('#customMat').val(''); //Empty the custom mat field on material change
+
+            // checks if others option is selected
+            if(selectedMat === 'Others') {
+                hiddenRow.show();
+            } else {
+                hiddenRow.hide();
+
+            }
+        });
+
+        // Form back btn event
+        $('#backButton').on('click', function() {
+            // Fade out the confirmation container
+            $('#confirmationContainer').fadeOut(function() {
+                // Once fadeOut is complete, hide it and fade in the form container
+                $(this).addClass('d-none');
+                $('#formContainer').removeClass('d-none').fadeIn();
+            });
+        });
+
+        // Initial Form Submit event
+        $('#submitInq').on('click', function() {
+            $('#confirmModal').modal('show');
+        });
+
+        // Confirmed Form Submit event
+        function confirmSubmit() {
+            $('#inquireForm').submit();
+        }
+
+        $(document).ready(function() {
+            const prodLabel = $('#productLabel'); 
+            const selectedProduct = sessionStorage.getItem('activeProd');
+
+            if(selectedProduct) {
+                prodLabel.text(selectedProduct);
+            } else {
+                prodLabel.text('No Item Selected');
+            }
+
+        }); 
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,687 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Tree Hiring</title>
+    <link rel="icon" href="../../../assets/img/fav-logo.png" type="image/webp">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Bootstrap 5.3.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Main css -->
+    <link rel="stylesheet" href="../../css/main.css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Data AOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <style>
+        i {
+            font-size: small;
+        }
+        input, textarea {
+            border-radius: 0 !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-wrapper">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light navbar-custom-bg">
+            <div class="container-fluid nav-container">
+                <a class="navbar-brand d-flex justify-content-center align-items-center" href="../../../index.html">
+                    <img src="../../../assets/img/fav-logo1.png" alt="" class="img-fluid nav-logo">
+                    <h2 class="nav-heading text-custom">Colortree</h2>
+                </a>
+                <button class="navbar-toggler" id="navbarToggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i id="toggleIcon" class="fas fa-bars text-custom"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item dropdown m-0">
+                        <li class="nav-item"><a id="faq" class="nav-link mx-2 fs-5 text-custom" href="../../../index.html">Home</a></li>
+                        <li class="nav-item dropdown m-0">
+                            <a class="nav-link dropdown-toggle fs-5 mx-2 text-custom" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                            <ul class="dropdown-menu">
+                                <li><a id="food" class="dropdown-item" href="../services/food.html">Food Packaging</a></li>
+                                <li><a id="industrial" class="dropdown-item" href="../services/industrial.html">Industrial Packaging</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a id="inquire" class="nav-link mx-2 fs-5 text-custom" href="../inquire/inquire.html">Inquire</a></li>
+                        <li class="nav-item"><a id="inquire" class="nav-link mx-2 fs-5 text-custom active-nav-link" href="./hiring.html">Hiring</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <br><br><br>
+        <!-- Body content -->
+        <main class="mt-5 mb-5 px-3">
+            <div class="text-center mb-3">
+                <h2>Colortree Label Corporation</h2>
+                <p class="lead">Lot 3-5, Block 8, Phase 2, Mountview Industrial Complex, Carmona, Cavite</p>
+                <h5>Application for Employment</h5>
+            </div>
+            <div class="container p-3 border rounded bg-light" data-aos="fade-up" data-aos-delay="100">
+                <form id="applicationForm">
+                    <!-- 1st page -->
+                    <div id="1" class="row">
+                        <h3 class="mb-3"><u>Personal Information</u></h3>
+                        <!-- 1st row -->
+                        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                            <label for="">Position(<i>Autofilled</i>):</label>
+                            <input type="text" id="appliedPosition" name="appliedPosition" class="form-control" readonly>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                            <label for="">Last Name:</label>
+                            <input type="text" id="lName" name="lName" class="form-control">
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                            <label for="">First Name:</label>
+                            <input type="text" id="fName" name="fName" class="form-control">
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                            <label for="">Middle Name:</label>
+                            <input type="text" id="mName" name="mName" class="form-control">
+                        </div>
+
+                        <!-- 2nd row -->
+                        <div class="col-lg-9 col-md-6 mb-3">
+                            <label for="">Permanent Address:</label>
+                            <input type="text" id="permAddress" name="permAddress" class="form-control">
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                            <label for="">Contact No:</label>
+                            <input type="text" id="permContact" name="permContact" class="form-control">
+                        </div>
+
+                        <!-- 3rd row -->
+                        <div class="col-lg-9 col-md-6 mb-3">
+                            <label for="">Present Address:</label>
+                            <input type="text" id="presAddress" name="presAddress" class="form-control">
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                            <label for="">Contact No:</label>
+                            <input type="text" id="presContact" name="presContact" class="form-control">
+                        </div>
+
+                        <!-- 4th row -->
+                        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                            <label for="">Email Address:</label>
+                            <input type="text" id="email" name="email" class="form-control">
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                            <label for="">Date of Birth:</label>
+                            <input type="date" id="bday" name="bday" class="form-control">
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                            <label for="">Age:</label>
+                            <input type="text" id="age" name="age" class="form-control">
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                            <label for="">Nationality:</label>
+                            <input type="text" id="nationality" name="nationality" class="form-control">
+                        </div>
+
+                        <!-- 5th row -->
+                        <div class="col-lg-6 col-sm-12 mb-3">
+                            <label for="">Birthplace:</label>
+                            <input type="text" id="birthPlace" name="birthPlace" class="form-control">
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                            <label for="">Sex(<i>Assigned on birth</i>):</label>
+                            <select name="sex" id="sex" class="form-control">
+                                <option selected disabled>--Select--</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                            <label for="">Religion:</label>
+                            <input type="text" id="religion" name="religion" class="form-control">
+                        </div>
+
+                        <!-- 6th row -->
+                        <div class="col-lg-2 col-md-6 col-sm-12 mb-3">
+                            <label for="">Marital Status:</label>
+                            <select name="status" id="status" class="form-control">
+                                <option selected disabled>--Select--</option>
+                                <option value="single">Single</option>
+                                <option value="married">Married</option>
+                                <option value="widowed">Widowed</option>
+                                <option value="separated">Separated</option>
+                            </select>
+                        </div>
+
+                        <div class="col-lg-2 col-md-6 col-sm-12 mb-3">
+                            <label for="">No. of Children:</label>
+                            <input type="number" id="childCount" name="childCount" class="form-control">
+                        </div>
+
+                        <div class="col-lg-2 col-md-6 col-sm-12 mb-3">
+                            <label for="">Tin No:</label>
+                            <input type="text" id="tin" name="tin" class="form-control">
+                        </div>
+
+                        <div class="col-lg-2 col-md-6 col-sm-12 mb-3">
+                            <label for="">SSS:</label>
+                            <input type="text" id="sss" name="sss" class="form-control">
+                        </div>
+
+                        <div class="col-lg-2 col-md-6 col-sm-12 mb-3">
+                            <label for="">PhilHealth No:</label>
+                            <input type="text" id="phHealth" name="phHealth" class="form-control">
+                        </div>
+
+                        <div class="col-lg-2 col-md-6 col-sm-12 mb-3">
+                            <label for="">HDMF:</label>
+                            <input type="text" id="hdmf" name="hdmf" class="form-control">
+                        </div>
+
+                        <!-- 8th row -->
+                        <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+                            <label for="">Father's Name:</label>
+                            <input type="text" id="fatherName" name="fatherName" class="form-control">
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+                            <label for="">Occupation:</label>
+                            <input type="text" id="fatherOccupation" name="fatherOccupation" class="form-control">
+                        </div>
+
+                        <div class="col-lg-2 col-md-6 col-sm-12 mb-3">
+                            <label for="">Age:</label>
+                            <input type="number" id="fatherAge" name="fatherAge" class="form-control">
+                        </div>
+
+                        <!-- 9th row -->
+                        <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+                            <label for="">Mother's Name:</label>
+                            <input type="text" id="motherName" name="motherName" class="form-control">
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+                            <label for="">Occupation:</label>
+                            <input type="text" id="motherOccupation" name="MotherOccupation" class="form-control">
+                        </div>
+
+                        <div class="col-lg-2 col-md-6 col-sm-12 mb-3">
+                            <label for="">Age:</label>
+                            <input type="number" id="motherAge" name="motherAge" class="form-control">
+                        </div>
+
+                        <!-- 10th row -->
+                        <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+                            <label for="">Spouse's Name:</label>
+                            <input type="text" id="spouseName" name="spouseName" class="form-control">
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+                            <label for="">Occupation:</label>
+                            <input type="text" id="spouseOccupation" name="spouseOccupation" class="form-control">
+                        </div>
+
+                        <div class="col-lg-2 col-md-6 col-sm-12 mb-3">
+                            <label for="">Age:</label>
+                            <input type="number" id="spouseAge" name="spouseAge" class="form-control">
+                        </div>
+
+                        <!-- 11th row -->
+                         <p class="lead">In case of emergency, please notify: (Kindly give atleast 3) <text class="btn btn-custom2" onclick="addEmergencyDetails()">Add</text></p>
+                         <div id="emergencyContactContainer" class="col-12 p-3">
+                            <div class="row border p-3 mb-3">
+                                <div class="col-lg-3 col-md-6 col-md-12 mb-3">
+                                    <label for="">Name:</label>
+                                    <input type="text" id="emergencyName1" name="emergencyName1" class="form-control">
+                                </div>
+
+                                <div class="col-lg-3 col-md-6 col-md-12 mb-3">
+                                    <label for="">Relationship:</label>
+                                    <input type="text" id="emergencyRelationship1" name="emergencyRelationship1" class="form-control">
+                                </div>
+
+                                <div class="col-lg-3 col-md-6 col-md-12 mb-3">
+                                    <label for="">Address:</label>
+                                    <input type="text" id="emergencyAddress1" name="emergencyAddress1" class="form-control">
+                                </div>
+
+                                <div class="col-lg-3 col-md-6 col-md-12 mb-3">
+                                    <label for="">Contact:</label>
+                                    <input type="text" id="emergencyContact1" name="emergencyContact1" class="form-control">
+                                </div>
+                            </div> 
+
+                            
+                         </div>
+                    </div>
+
+                    <!-- 2nd page -->
+                    <div id="2" class="row">
+                        <h3 class="mb-3"><u>Educational Background</u></h3>
+                        <!-- 1st row elem -->
+                        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                             <label for="">Elementary</label>
+                             <input type="text" id="elem" name="elem" class="form-control">
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                            <label for="">Address</label>
+                            <input type="text" id="elemAddress" name="elemAddress" class="form-control">
+                       </div>
+
+                        <div class="col-lg-2 col-md-6 col-sm-12 mb-3">
+                            <label for="">From(Start Year):</label>
+                            <input type="date" id="elemStartYr" name="elemStartYr" class="form-control">
+                        </div>
+
+                        <div class="col-lg-2 col-md-6 col-sm-12 mb-3">
+                            <label for="">To(End Year):</label>
+                            <input type="date" id="elemEndYr" name="elemEndYr" class="form-control">
+                        </div>
+
+                        <div class="col-lg-2 col-md-6 col-sm-12 mb-3">
+                            <label for="">Awards Received</label>
+                            <input type="text" id="elemAwards" name="elemAwards" class="form-control">
+                       </div>
+
+                       <hr class="my-3">
+
+                        <!-- 2nd row High School -->
+                        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                            <label for="">High School</label>
+                            <input type="text" id="hs" name="hs" class="form-control">
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                            <label for="">Address</label>
+                            <input type="text" id="hsAddress" name="hsAddress" class="form-control">
+                        </div>
+
+                        <div class="col-lg-2 col-md-6 col-sm-12 mb-3">
+                            <label for="">From(Start Year):</label>
+                            <input type="date" id="hsStartYr" name="hsStartYr" class="form-control">
+                        </div>
+
+                        <div class="col-lg-2 col-md-6 col-sm-12 mb-3">
+                            <label for="">To(End Year):</label>
+                            <input type="date" id="hsEndYr" name="hsEndYr" class="form-control">
+                        </div>
+
+                        <div class="col-lg-2 col-md-6 col-sm-12 mb-3">
+                            <label for="">Awards Received</label>
+                            <input type="text" id="hsAwards" name="hsAwards" class="form-control">
+                        </div>
+
+                        <!-- 3rd row Vocational -->
+                        <hr class="my-3">
+                        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                            <label for="">Did you acquire vocational education?</label><br>
+                            <input type="radio" id="confirmVocationalYes" name="confirmVocational" value="yes">
+                            <label for="confirmCollegeGradYes">Yes</label>
+                            <input type="radio" id="confirmVocationalNo" name="confirmVocational" value="no">
+                            <label for="confirmCollegeGradNo">No</label>
+                        </div>
+                        <div id="vocationalSection" class="row d-none">
+                            <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                                <label for="">Vocational</label>
+                                <input type="text" id="vocational" name="vocational" class="form-control">
+                            </div>
+    
+                            <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                                <label for="">Address</label>
+                                <input type="text" id="vocationalAddress" name="vocationalAddress" class="form-control">
+                            </div>
+    
+                            <div class="col-lg-2 col-md-6 col-sm-12 mb-3">
+                                <label for="">From(Start Year):</label>
+                                <input type="date" id="vocationalStartYr" name="vocationalStartYr" class="form-control">
+                            </div>
+    
+                            <div class="col-lg-2 col-md-6 col-sm-12 mb-3">
+                                <label for="">To(End Year):</label>
+                                <input type="date" id="vocationalEndYr" name="vocationalEndYr" class="form-control">
+                            </div>
+    
+                            <div class="col-lg-2 col-md-6 col-sm-12 mb-3">
+                                <label for="">Awards Received</label>
+                                <input type="text" id="vocationalAwards" name="vocationalAwards" class="form-control">
+                            </div>
+                        </div>
+
+                        <!-- 4th row College -->
+                        <hr class="my-3">
+                        <div class="col-lg-2 col-md-6 col-sm-12 mb-3">
+                            <label for="">Did you go to College?</label><br>
+                            <input type="radio" id="confirmCollegeGradYes" name="confirmCollegeGrad" value="yes">
+                            <label for="confirmCollegeGradYes">Yes</label>
+                            <input type="radio" id="confirmCollegeGradNo" name="confirmCollegeGrad" value="no">
+                            <label for="confirmCollegeGradNo">No</label>
+                        </div>
+                        <div id="collegeSection" class="row d-none">
+                            <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                                <label for="">College</label>
+                                <input type="text" id="college" name="college" class="form-control">
+                            </div>
+    
+                            <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                                <label for="">Address</label>
+                                <input type="text" id="collegeAddress" name="collegeAddress" class="form-control">
+                            </div>
+    
+                            <div class="col-lg-2 col-md-6 col-sm-12 mb-3">
+                                <label for="">From(Start Year):</label>
+                                <input type="date" id="collegeStartYr" name="collegeStartYr" class="form-control">
+                            </div>
+    
+                            <div class="col-lg-2 col-md-6 col-sm-12 mb-3">
+                                <label for="">To(End Year):</label>
+                                <input type="date" id="collegeEndYr" name="collegeEndYr" class="form-control">
+                            </div>
+    
+                            <div class="col-lg-2 col-md-6 col-sm-12 mb-3">
+                                <label for="">Awards Received</label>
+                                <input type="text" id="collegeAwards" name="collegeAwards" class="form-control">
+                            </div>
+    
+                            <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                                <label for="">Course</label>
+                                <input type="text" id="collegeCourse" name="collegeCourse" class="form-control">
+                            </div>
+
+                            <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                                <label for="">Education Level</label>
+                                <select name="collegeLvl" id="collegeLvl" class="form-control">
+                                    <option selected disabled>--Select--</option>
+                                    <option value="undergraduate">Undergraduate</option>
+                                    <option value="graduate">Graduate</option>
+                                    <option value="masteral">Masteral</option>
+                                    <option value="doctoral">Doctoral</option>
+                                </select>
+                            </div>
+
+                            <div id="postGrad" class="col-lg-3 col-md-6 col-sm-12 mb-3 d-none">
+                                <label for="">Masteral/Doctoral Field of Study</label>
+                                <input type="text" id="fieldStudy" name="fieldStudy" class="form-control">
+                            </div>
+
+                            
+
+                        </div>
+
+                        <br><br><br><br>
+                        <h3 class="mb-3"><u>Work Reference</u></h3>
+                        <p class="lead"><i>Click "Add" button to generate input fields for Work Reference</i> <text class="btn btn-custom2" onclick="addReference()">Add</text></p>
+                        <div id="referenceSection" class="col-12 mb-5">
+                        </div>
+
+                        <!-- Employment History section -->
+                        <h3 class="mb-3"><u>Employment History</u></h3>
+                        <p class="lead"><i>Click "Add" button to generate input fields for employment history</i> <text class="btn btn-custom2" onclick="addEmploymentDetails()">Add</text></p>
+                        <div id="employmentSection" class="col-12">
+                        </div>
+                    </div>
+
+                    <!-- 3rd page -->
+                    <div id="3" class="row">
+                        <!-- 1st row -->
+                        <h3 class="mb-3"><u>Physical Information</u></h3>
+                        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                            <label for="">Height(inches):</label>
+                            <input type="number" name="height" id="height" class="form-control">
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                            <label for="">Weight(Kilogram):</label>
+                            <input type="number" name="weight" id="weight" class="form-control">
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                            <label for="">Choose Dominant Hand:</label>
+                            <select name="dominantHand" id="dominantHand" class="form-control">
+                                <option selected disabled>--Select--</option>
+                                <option value="right-handed">Right Handed</option>
+                                <option value="left-handed">Left Handed</option>
+                            </select>
+                        </div>
+
+                        <!-- 2nd row -->
+                        <div class="col-12 mb-3">
+                            <label for="">Have you suffered from any illness, injury or operation for the last 6 months due to illness?</label><br>
+                            <input type="radio" id="confirmOperationYes" name="confirmOperation" value="yes">
+                            <label for="confirmOperationYes">Yes</label>
+                            <input type="radio" id="confirmOperationNo" name="confirmOperation" value="no">
+                            <label for="confirmOperationNo">No</label>
+                        </div>
+
+                        <div id="operationDetails" class="col-12 mb-3 d-none">
+                            <label for=""><i>Please specify</i></label>
+                            <textarea name="operationData" id="operationData" class="form-control w-50" rows="5"></textarea>
+                        </div>
+
+                        <!-- 3rd row -->
+                        <div class="col-12 mb-3">
+                            <label for="">Are you taking medicines in the last 6 months due to illness?</label><br>
+                            <input type="radio" id="confirmMedicineYes" name="confirmMedicine" value="yes">
+                            <label for="confirmOperationYes">Yes</label>
+                            <input type="radio" id="confirmMedicineNo" name="confirmMedicine" value="no">
+                            <label for="confirmOperationNo">No</label>
+                        </div>
+
+                        <!-- 4th row -->
+                        <div class="col-12 mb-3">
+                            <label for="">Please indicate if you are pregnant?</label><br>
+                            <input type="radio" id="confirmPregnantYes" name="confirmPregnant" value="yes">
+                            <label for="confirmOperationYes">Yes</label>
+                            <input type="radio" id="confirmPregnantNo" name="confirmPregnant" value="no">
+                            <label for="confirmOperationNo">No</label>
+                        </div>
+
+                        <div id="isPregcontainer" class="col-lg-3 col-md-6 col-sm-12 mb-5 d-none">
+                            <label for="">No. of Months</label>
+                            <input type="date" id="pregnantMonths" name="pregnantMonths" class="form-control">
+                        </div>
+
+                        <h3 class="mb-3"><u>Other Details</u></h3>
+
+                        <div class="col-lg-2 col-md-6 col-sm-12">
+                            <label for="">Expected Salary</label>
+                            <input type="number" id="salaryExpect" name="salaryExpect" class="form-control">
+                        </div>
+
+                        <div class="col-12"></div> <!-- Extra div -->
+
+                        <i class="mt-4">Please list all, and separate by comma</i>
+
+                        <!-- 5th row -->
+                        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                            <label for="">Mode of Transport</label>
+                            <textarea name="transport" id="transport" class="form-control" rows="4"></textarea>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                            <label for="">Language/Dialect</label>
+                            <textarea name="language" id="language" class="form-control" rows="4"></textarea>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                            <label for="">Hobbies</label>
+                            <textarea name="hobbies" id="hobbies" class="form-control" rows="4"></textarea>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                            <label for="">How did you discover Colortree?</label>
+                            <textarea name="cTreeDiscover" id="cTreeDiscover" class="form-control" rows="4"></textarea>
+                        </div>
+
+                        <!-- 6th row -->
+                        <div class="col-12 mt-4 mb-3">
+                            <label for="">Have you worked in our company before?</label><br>
+                            <input type="radio" id="workedBeforeYes" name="workedBefore" value="yes">
+                            <label for="">Yes</label>
+                            <input type="radio" id="workedBeforeNo" name="workedBefore" value="no">
+                            <label for="">No</label>
+                        </div>
+
+                        <div class="col-12 mt-4 mb-3">
+                            <label for="">Do you have any relatives who work in this company/supplier/client or any 3rd party doing business with Colortree?</label><br>
+                            <input type="radio" id="hasRelativesYes" name="hasRelatives" value="yes">
+                            <label for="">Yes</label>
+                            <input type="radio" id="hasRelativesNo" name="hasRelatives" value="no">
+                            <label for="">No</label>
+                        </div>
+
+                        <div class="col-12 mt-4 mb-3">
+                            <label for="">Do you accept shift work?</label><br>
+                            <input type="radio" id="shiftWorkYes" name="shiftWork" value="yes">
+                            <label for="">Yes</label>
+                            <input type="radio" id="shiftWorkNo" name="shiftWork" value="no">
+                            <label for="">No</label>
+                        </div>
+
+                        <div class="col-12 mt-4 mb-3">
+                            <label for="">Will you take physical examination?</label><br>
+                            <input type="radio" id="physicalExamYes" name="physicalExam" value="yes">
+                            <label for="">Yes</label>
+                            <input type="radio" id="physicalExamNo" name="physicalExam" value="no">
+                            <label for="">No</label>
+                        </div>
+
+                        <div class="col-12 mt-4 mb-3">
+                            <label for="">Have you ever been convicted for any assault?</label><br>
+                            <input type="radio" id="convictedYes" name="convicted" value="yes">
+                            <label for="">Yes</label>
+                            <input type="radio" id="convictedNo" name="convicted" value="no">
+                            <label for="">No</label>
+                        </div>
+
+
+                    </div>
+
+                </form>
+                
+                <!-- Form Navigation buttons -->
+                <div class="text-center">
+                    <button type="button" id="prevBtn" class="btn btn-custom1 text-custom" onclick="navigate('prev')">Previous</button>
+                    <button type="button" id="nextBtn" class="btn btn-custom1 text-custom" onclick="navigate('next')">Next</button>
+                    <button type="button" id="submitBtn" class="btn btn-custom1 text-custom" onclick="submitApplication()">Submit</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal Empty Field -->
+    <div class="modal fade" id="emptyFieldsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Empty Field Alert <i class="bi bi-exclamation-triangle-fill text-danger"></i></h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modalMessageBody">
+                    Please fill in all fields to continue. And make sure to have atleast 3 emergency contacts.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="modalBtn" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confirm submit modal -->
+    <div class="modal fade" id="confirmModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Confrm to Submit?</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modalMessageBody">
+                    Once submitted, your data will be sent to our own webservers. Please wait 7 - 14 business days for a reply.
+                </div>
+                <div class="modal-footer">
+                    <button id="sendApplicationBtn" class="btn btn-success" onclick="finalSubmit()">Send Application</button>
+                    <button type="button" id="modalBtn" class="btn btn-secondary confirm-close" data-bs-dismiss="modal">Back</button>
+                </div>
+                <div id="loader" class="text-center mb-3 d-none">
+                    <div class="spinner-border text-success" role="status">
+                        <span class="sr-only"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Your application was successfully sent! <i class="bi bi-check-circle-fill text-success fs-4"></i></h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modalMessageBody">
+                    Please check your email and verify your application. 
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="modalBtn" class="btn btn-secondary result-close" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Failed modal -->
+    <div class="modal fade" id="failedModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Error occured while sending application! <i class="bi bi-exclamation-circle-fill text-danger fs-4"></i></i></h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modalMessageBody">
+                    Double check your data and make sure you input a valid email address. If it still fails, please try again at a later time. 
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="modalBtn" class="btn btn-secondary result-close" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer(Reusable components) -->
+    <footer id="footer" class="footer"></footer>
+
+
+    <!-- Bootstrap 5.3.3 JS Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Data AOS JS CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- For navbar toggle animation -->
+     <script src="../_components/toggleNavbar.js"></script>
+
+     <!-- Components js -->
+    <script src="../_components/componentLoader.js"></script>
+
+    <!-- Page script -->
+    <script src="./hiringForm.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,4 @@
+@var string|callable|\Psr\Log\LoggerInterface
+
+
+if code errors occurs in PHPMailer.php, try inserting this line of code at line 432 after "@see SMTP::$Debugoutput"

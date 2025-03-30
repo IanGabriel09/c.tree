@@ -1,0 +1,325 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Tree Hiring</title>
+    <link rel="icon" href="../../../assets/img/fav-logo.png" type="image/webp">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Bootstrap 5.3.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Main css -->
+    <link rel="stylesheet" href="../../css/main.css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Data AOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <style>
+        i {
+            font-size: small;
+        }
+        .specific-pos-card {
+            position: sticky;
+            top: 85px; /* Adjust this to the height of your navbar */
+        }
+        #activePosSection {
+            max-height: 9999px;
+        }
+        #activePosBody {
+            height: 500px;
+            overflow-y: scroll;
+        }
+        .empty-img {
+            height: auto;
+            width: 20vh;
+        }
+        @media (max-width: 768px) {
+            #activePosSection {
+                display: none !important;
+            }
+            .empty-img {
+                height: auto;
+                width: 10vh;
+            }
+        }
+        @media (max-width: 576px) {
+            .empty-img {
+                height: auto;
+                width: 5vh;
+            }
+
+        }
+        @media (max-width: 376px) {
+            .empty-container {
+                display: initial !important;
+                text-align: center !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container-wrapper">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light navbar-custom-bg">
+            <div class="container-fluid nav-container">
+                <a class="navbar-brand d-flex justify-content-center align-items-center" href="../../../index.html">
+                    <img src="../../../assets/img/fav-logo1.png" alt="" class="img-fluid nav-logo">
+                    <h2 class="nav-heading text-custom">Colortree</h2>
+                </a>
+                <button class="navbar-toggler" id="navbarToggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i id="toggleIcon" class="fas fa-bars text-custom"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item dropdown m-0">
+                        <li class="nav-item"><a id="faq" class="nav-link mx-2 fs-5 text-custom" href="../../../index.html">Home</a></li>
+                        <li class="nav-item dropdown m-0">
+                            <a class="nav-link dropdown-toggle fs-5 mx-2 text-custom" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                            <ul class="dropdown-menu">
+                                <li><a id="food" class="dropdown-item" href="../services/food.html">Food Packaging</a></li>
+                                <li><a id="industrial" class="dropdown-item" href="../services/industrial.html">Industrial Packaging</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a id="inquire" class="nav-link mx-2 fs-5 text-custom" href="../inquire/inquire.html">Inquire</a></li>
+                        <li class="nav-item"><a id="inquire" class="nav-link mx-2 fs-5 text-custom active-nav-link" href="./hiring.html">Hiring</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <br><br><br>
+        <!-- Body content -->
+        <main class="mt-5 mb-5 px-3">
+            <div id="contentContainer" class="container">
+                <div class="row">
+                    <!-- Positions section(Populated on page load) -->
+                    <div id="positionsSection" class="col-md-5 col-sm-12 mt-3" data-aos="fade-up" data-aos-delay="">                        
+                    </div>
+
+                    <!-- Active positions section -->
+                    <div id="activePosSection" class="col-md-7 col-sm-12 mt-3">
+                        <div id="activePosContainer" class="specific-pos-card" data-aos="fade-up" data-aos-delay="200">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        
+        </main>
+    </div>
+
+    <!-- Page indicator(Delete if real data is present) -->
+    <div class="indicator">Sample Data</div>
+
+    <!-- Footer(Reusable components) -->
+    <footer id="footer" class="footer"></footer>
+
+
+    <!-- Bootstrap 5.3.3 JS Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Data AOS JS CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- For navbar toggle animation -->
+     <script src="../_components/toggleNavbar.js"></script>
+
+     <!-- Components js -->
+    <script src="../_components/componentLoader.js"></script>
+
+    <!-- Page script -->
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+        });
+
+        // Function to get selected position (Different views in small and large devices)
+        function getPosition(posID, boolCount) {
+            sessionStorage.setItem('selectedPosition', posID);
+            const screenWidth = window.innerWidth; // Get screen width
+            const sessionPos = sessionStorage.getItem('selectedPosition'); // session position stored in a variable(reuse for ease)
+
+            if (screenWidth <= 768 && boolCount === true) {
+                // Handle differently for smaller screens
+                window.location.href = './hiring(sm).html';
+            } else {
+                // Handle for larger screens (default behavior)\
+                console.log('Large screen - ', sessionPos);
+                $.ajax({
+                    url: 'fetch_selectedPos.php', // Add fetch php script here 
+                    type: 'POST',
+                    data: { posID: sessionPos },  // Wrap sessionPos in an object
+                    success: function(response) {
+                        const activeSection = $('#activePosContainer');
+                        let formattedDate = new Date(response.date_posted);
+                        let dateOnly = formattedDate.toISOString().split('T')[0];
+
+                        // Parse the JSON strings into arrays
+                        let responsibilities = JSON.parse(response.responsibilities);
+                        let qualifications = JSON.parse(response.qualifications);
+                        let benefits = JSON.parse(response.benefits);
+
+                        activeSection.empty();
+
+                        // Initialize strings to hold the responsibilities, qualifications, and benefits HTML
+                        let responsibilitiesHTML = '';
+                        let qualificationsHTML = '';
+                        let benefitsHTML = '';
+
+                        // Use forEach to build the HTML content
+                        responsibilities.forEach(function(item) {
+                            responsibilitiesHTML += `<p><i class="bi bi-caret-right-fill"></i> ${item}</p>`;
+                        });
+
+                        qualifications.forEach(function(item) {
+                            qualificationsHTML += `<p><i class="bi bi-caret-right-fill"></i> ${item}</p>`;
+                        });
+
+                        benefits.forEach(function(item) {
+                            benefitsHTML += `<p><i class="bi bi-caret-right-fill"></i> ${item}</p>`;
+                        });
+
+                        // Create the active content with the prepared HTML
+                        let activeContent = `
+                            <div class="border p-3 rounded bg-light">
+                                <div class="activePosHead">
+                                    <h2>${response.pos_name}</h2>
+                                    <p class="lead">ID: ${response.UID}</p>
+                                    <div class="d-flex justify-content-between w-100 p-0">
+                                        <p class="m-0">Date Posted: ${dateOnly}</p>
+                                        <p class="m-0">Job Type: ${response.job_type}</p>
+                                    </div>
+
+                                    <h5 class="mt-2">Job Description</h5>
+                                    <div class="px-3">
+                                        <p class="text-justify-custom">${response.job_description}</p>
+                                        <div class="text-center">
+                                            <button class="btn btn-custom2" onclick="handleApplication('${response.pos_name}')">Apply Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <hr>
+
+                                <div id="activePosBody">
+                                    <div class="mt-2 responsibilities">
+                                        <h5>Responsibilities:</h5>
+                                        ${responsibilitiesHTML}
+                                    </div>
+
+                                    <div class="mt-2 qualifications">
+                                        <h5>Qualifications:</h5>
+                                        ${qualificationsHTML}
+                                    </div>
+
+                                    <div class="mt-2 benefits">
+                                        <h5>Benefits:</h5>
+                                        ${benefitsHTML}
+                                    </div>
+                                </div>
+                            </div>
+
+                        `;
+
+                        // Append the generated content to the active section
+                        activeSection.append(activeContent);
+                    },
+                    error: function(xhr, status, error) {
+                        alert('Async error, check browser console for error information.');
+                        console.error('Console error: ', error);
+                    }
+                });
+            }
+        }
+
+        // Function to populate positions section on load
+        function populatePositions() {
+            $.ajax({
+                    url: './fetch_position.php',
+                    type: 'GET',
+                    success: function(response) {
+                        if(response.length === 0) {
+                            // Shows empty page content if no data is present in DB table
+                            const contentContainer = $('#contentContainer');
+                            contentContainer.empty();
+
+                            const emptyContent = `
+                                <div class="h-100 d-flex justify-content-center align-items-center empty-container"  data-aos="fade-up" data-aos-delay="100">
+                                    <div class="text-center">
+                                        <img src="../../../assets/img/icons/no-vacancy.webp" alt="" class="img-fluid empty-img">
+                                        <h1 class="empty-text">We are currently not Hiring.</h1>
+                                        <h1 class="empty-text"> Please check again another time.</h1>
+                                        <a href="../../../index.html" class="lead text-custom1"><i class="bi bi-box-arrow-in-up-left"></i> Back to home</a>
+                                    </div>
+                                </div>
+                            `
+                            contentContainer.append(emptyContent);
+                            return; // Breaks ajax call immediately if there is 0 responses
+                        } else {
+                            const positionSection = $('#positionsSection');
+                            positionSection.empty();
+
+                            response.forEach(function(item) {
+                                let formattedDate = new Date(item.date_posted);
+                                let dateOnly = formattedDate.toISOString().split('T')[0];
+
+                                let posContent = `
+                                    <div class="position-card p-3 border mb-3 rounded bg-light">
+                                        <div class="pos-card-head">
+                                            <p class="lead">Position ID: ${item.UID}</p>
+                                            <h4>${item.pos_name}</h4>
+                                            <p>Date Posted: ${dateOnly}</p> <!-- Display formatted date -->
+                                            <p>Job Type: ${item.job_type}</p>
+                                            <a href="#" class="lead text-decoration-none text-custom1"><i class="bi bi-send-plus"></i> <i>Apply Now</i></a>
+                                        </div>
+
+                                        <div class="pos-card-body border p-3 bg-white">
+                                            <h5>Job description:</h5>
+                                            <p class="text-justify-custom">${item.job_description}</p>
+                                            <div class="text-center">
+                                                <button class="btn btn-custom1 text-custom" onclick="getPosition('${item.UID}', true)">See more</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                `;
+
+                                // Append the generated content to the positionSection
+                                positionSection.append(posContent);
+                            });
+                            // Gets first position and prints in specific section
+                            getPosition(response[0].UID, false);
+                        }
+
+                    },
+                    error: function(xhr, status, error) {
+                        alert('Async error, check browser console for error information.')
+                        console.error('Console error: ', error);
+                    }
+                });
+        }
+        
+        // Function for page redirect to application form
+        function handleApplication(selectedPos) {
+            sessionStorage.setItem('posName', selectedPos);
+            window.location.href = "./hiringForm.html";
+        }
+
+        $(document).ready(function() {
+            sessionStorage.clear();
+            console.log(sessionStorage.getItem('selectedPosition'));
+            
+            populatePositions(); // Call Populate position on page load
+        });
+    </script>
+</body>
+</html>

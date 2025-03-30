@@ -1,0 +1,436 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Tree Home</title>
+    <link rel="icon" href="./assets/img/fav-logo.png" type="image/webp">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Bootstrap 5.3.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Main css -->
+    <link rel="stylesheet" href="./src/css/main.css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Data AOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <style>
+        /* Hero styles */
+        main {
+            overflow: hidden !important;
+        }
+        .hero-section {
+            background-size: cover; /* or 'contain' */
+            background: repeat-x;
+            background-position: 200% 100%;
+            width: 100%;
+            height: 700px;
+            position: relative; /* Make sure the overlay can be placed on top */
+        }
+        .hero-section::before {
+            content: ''; /* Empty content */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(83, 128, 83, 0.5); /* Light green with transparency */
+            z-index: 1; /* Place it behind the content */
+        }
+        .hero-section .hero-content {
+            position: relative;
+            z-index: 2; /* Bring the text content to the front */
+        }
+        /* FAQ section */
+        .faq-arrow {
+            stroke: #508b5d !important;
+        }
+        .about-p {
+            text-align: justify !important;
+        }
+
+        @media (max-width: 992px) {
+            .custom-reverse {
+                display: flex;
+                flex-wrap: wrap-reverse;
+            }
+            .custom-col {
+                display: none !important;
+            }
+            .custom-col1 {
+                display: initial !important;
+            }
+            .faq-arrow {
+                display: none !important;
+            }
+        }
+        @media (max-width: 768px) {
+            .hero-section {
+                height: 640px !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container-wrapper">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid nav-container">
+                <a class="navbar-brand d-flex justify-content-center align-items-center" href="./index.html">
+                    <img src="./assets/img/fav-logo1.png" alt="" class="img-fluid nav-logo">
+                    <h2 class="nav-heading text-custom1">Colortree</h2>
+                </a>
+                <button class="navbar-toggler" id="navbarToggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i id="toggleIcon" class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item dropdown m-0">
+                        <li class="nav-item mx-2"><a id="faq" class="nav-link fs-5 text-custom1" href="./index.html">Home</a></li>
+                        <li class="nav-item dropdown m-0">
+                            <a class="nav-link dropdown-toggle fs-5 mx-2 text-custom1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                            <ul class="dropdown-menu">
+                                <li><a id="food" class="dropdown-item" href="./src/pages/services/food.html">Food Packaging</a></li>
+                                <li><a id="industrial" class="dropdown-item" href="./src/pages/services/industrial.html">Industrial Packaging</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item mx-2"><a id="inquire" class="nav-link fs-5 text-custom1" href="./src/pages/inquire/inquire.html">Inquire</a></li>
+                        <li class="nav-item mx-2"><a id="inquire" class="nav-link fs-5 text-custom1" href="./src/pages/hiring/hiring.html">Hiring</a></li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </nav>
+
+        <main>
+            <!-- Hero section -->
+            <div class="mb-5 d-flex justify-content-center align-items-center hero-section" style="background-image: url('./assets/img/bg/hero-landing.webp');">
+                <div class="hero-content">
+                    <div class="h-50 d-flex align-items-center justify-content-center text-center">
+                        <div>
+                            <h1 class="fs-hero text-shadow-custom text-light" data-aos="fade-up">Welcome to Colortree</h1>
+                            <h5 class="fs-hero1 text-shadow-custom text-light" data-aos="fade-up" data-aos-delay="200">We are a group of persistent and passionate printers</h5>
+                            <a href="#services" class="btn btn-custom lead mt-4 fs-hero2" data-aos="fade-up" data-aos-delay="400">Our Services</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Body content -->
+            <div class="container">
+                <!-- About Us -->
+                <div id="" class="about-section mb-5">
+                    <div class="text-center" data-aos="fade-up">
+                        <h1 class="lead fs-1">About Us</h1>
+                        <h5 class="text-secondary lead-custom">Your Partner in Making your Vision to Reality</h5>
+                    </div>
+
+                    <!-- 1st row -->
+                    <div class="row custom-reverse mt-5">
+                        <!-- about heading -->
+                        <div class="col-lg-6 col-md-12 p-3" data-aos="fade-up" data-aos-delay="200">
+                            <!-- Heading -->
+                             <div class="d-flex align-items-center h-100">
+                                <div class="">
+                                    <h3 class="text-custom1">WHO ARE WE?</h3>
+                                    <p class="lead about-p">
+                                        Colortree Label Corporation was established in 2015, it is a leading provider of printing and paper packaging solutions, located in Carmona, Cavite. Our company is dedicated to delivering premium services tailored to the unique requirements of both businesses and individuals. It is established with the purpose of bringing efficient business acumen into the Industry and to provide most cost-effective with excellent quality and reliable services to the customers.
+                                    </p>
+                                </div>
+                             </div>
+
+                        </div>
+                        <!-- about img -->
+                        <div class="col-lg-6 col-md-12 d-flex align-items-center" data-aos="fade-up" data-aos-delay="400">
+                            <img src="./assets/img/sample_img.webp" alt="" class="img-fluid rounded">
+                        </div>
+                    </div>
+
+                    <!-- 2nd row -->
+                    <div class="row mt-custom">
+                        <!-- about img -->
+                        <div class="col-lg-6 col-md-12 d-flex align-items-center" data-aos="fade-up" data-aos-delay="400">
+                            <img src="./assets/img/sample_img.webp" alt="" class="img-fluid rounded">
+                        </div>
+
+                        <!-- about heading -->
+                        <div class="col-lg-6 col-md-12 p-3" data-aos="fade-up" data-aos-delay="200">
+                            <!-- Heading -->
+                            <div class="d-flex align-items-center h-100">
+                                <div class="">
+                                    <h3 class="text-custom1">WHAT WE DO</h3>
+                                    <!-- Bullets -->
+                                    <div class="d-flex">
+                                        <i class="bi bi-check2-all custom-color mt-1 fs-5"></i>
+                                        <p class="m-0 mx-1 lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit adipisci voluptatem delectus libero.</p>
+                                    </div>
+                            
+                                    <div class="d-flex">
+                                        <i class="bi bi-check2-all custom-color mt-1 fs-5"></i>
+                                        <p class="m-0 mx-1 lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit adipisci voluptatem delectus libero.</p>
+                                    </div>
+                            
+                                    <div class="d-flex">
+                                        <i class="bi bi-check2-all custom-color mt-1 fs-5"></i>
+                                        <p class="m-0 mx-1 lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit adipisci voluptatem delectus libero.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 3rd row -->
+                    <div class="row custom-reverse mt-custom">
+                        <!-- about heading -->
+                        <div class="col-lg-6 col-md-12 p-3" data-aos="fade-up" data-aos-delay="200">
+                            <!-- Heading -->
+                             <div class="d-flex align-items-center h-100">
+                                <div class="">
+                                    <h3 class="text-custom1">WHAT'S OUR GOAL?</h3>
+                                    <p class="lead about-p">
+                                        Colortree envisions becoming a leading integrated printing and packaging company, delivering excellent service and outstanding results. Our mission is to be a market leader, recognized for eco-friendly, food-grade, and high-quality products. As a one-stop source, we aim to provide innovative packaging solutions that meet performance and sustainability needs.
+                                    </p>
+                                </div> 
+                             </div>
+                        </div>
+                        <!-- about img -->
+                        <div class="col-lg-6 col-md-12 d-flex align-items-center" data-aos="fade-up" data-aos-delay="400">
+                            <img src="./assets/img/sample_img.webp" alt="" class="img-fluid rounded">
+                        </div>
+                    </div>
+
+                </div>
+
+                <br><br>
+                <br><br>
+                <br><br>
+                <br><br>
+
+                <!-- Products navigation -->
+                <div id="services" class="products-nav mb-5">
+                    <div class="text-center" data-aos="fade-up">
+                        <h1 class="lead fs-1">Our Services</h1>
+                        <p class="lead">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium quam blanditiis dolorem eius, ea excepturi assumenda dolor voluptatem nam nulla sapiente fuga doloribus velit ab id doloremque quos odio omnis!</p>
+                    </div>
+
+                    <div class="row py-5 gy-5">
+                        <div class="col-lg-6 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="">
+                            <div class="card">
+                                <img src="./assets/img/Product Img.webp" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Food Packaging</h5>
+                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ipsam ipsa qui dolorum porro vitae error numquam amet minima.</p>
+                                    <div class="text-center">
+                                        <a href="./src/pages/services/food.html" class="btn text-white btn-custom1">See More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="100">
+                            <div class="card">
+                                <img src="./assets/img/Product Img.webp" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Industrial Packaging</h5>
+                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ipsam ipsa qui dolorum porro vitae error numquam amet minima.</p>
+                                    <div class="text-center">
+                                        <a href="./src/pages/services/industrial.html" class="btn text-white btn-custom1">See More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                  
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ section (must be outside of container to get rid of margin constraints)-->
+            <div class="faq bg-custom">
+                <div class="container py-4">
+                    <div class="row">
+                        <!-- FAQ text -->
+                        <div class="col-lg-5 col-md-12" data-aos="fade-up">
+                            <h1 class="lead fs-1">Have a question? Check out the FAQ</h1>
+                            <h5 class="text-secondary lead-custom">We’ve compiled answers to the most frequently asked questions to help you better understand our services and processes.</h5>
+                            <!-- arrow svg -->
+                             <div class="d-flex justify-content-CENTER">
+                                <svg class="faq-arrow" width="200" height="211" viewBox="0 0 200 211" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M198.804 194.488C189.279 189.596 179.529 185.52 169.407 182.07L169.384 182.049C169.227 181.994 169.07 181.939 168.912 181.884C166.669 181.139 165.906 184.546 167.669 185.615C174.053 189.473 182.761 191.837 189.146 195.695C156.603 195.912 119.781 196.591 91.266 179.049C62.5221 161.368 48.1094 130.695 56.934 98.891C84.5539 98.7247 112.556 84.0176 129.508 62.667C136.396 53.9724 146.193 35.1448 129.773 30.2717C114.292 25.6624 93.7109 41.8875 83.1971 51.3147C70.1109 63.039 59.63 78.433 54.2039 95.0087C52.1221 94.9842 50.0776 94.8683 48.0703 94.6608C30.1803 92.8027 11.2197 83.6338 5.44902 65.1074C-1.88449 41.5699 14.4994 19.0183 27.9202 1.56641C28.6411 0.625793 27.2862 -0.561638 26.5419 0.358501C13.4588 16.4098 -0.221091 34.5242 0.896608 56.5659C1.8218 74.6941 14.221 87.9401 30.4121 94.2058C37.7076 97.0203 45.3454 98.5003 53.0334 98.8449C47.8679 117.532 49.2961 137.487 60.7729 155.283C87.7615 197.081 139.616 201.147 184.786 201.155L174.332 206.827C172.119 208.033 174.345 211.287 176.537 210.105C182.06 207.125 187.582 204.122 193.084 201.144C193.346 201.147 195.161 199.887 195.423 199.868C197.08 198.548 193.084 201.144 195.528 199.81C196.688 199.192 197.846 198.552 199.006 197.935C200.397 197.167 200.007 195.087 198.804 194.488ZM60.8213 88.0427C67.6894 72.648 78.8538 59.1566 92.1207 49.0388C98.8475 43.9065 106.334 39.2953 114.188 36.1439C117.295 34.8947 120.798 33.6609 124.168 33.635C134.365 33.5511 136.354 42.9911 132.638 51.031C120.47 77.4222 86.8639 93.9837 58.0983 94.9666C58.8971 92.6666 59.783 90.3603 60.8213 88.0427Z" fill="currentColor"></path>
+                                </svg>
+                             </div>
+
+                        </div>
+
+                        <!-- FAQ dropdowns -->
+                        <div class="col-lg-7 col-md-12">
+                            <div class="p-4">
+
+                                <!-- faq item -->
+                                <div class="row border p-3 drop-item mb-3" data-aos="fade-left" data-aos-delay="300">
+                                    <div class="col-12 d-flex justify-content-between">
+                                        <h5 class="custom-color align-content-center">1.) How do I place an order?</h5>
+                                        <i class="bi bi-chevron-down fs-3 dropper" onclick="toggleDropdown(this)"></i>
+                                    </div>
+                                    <div class="dropdown-content mb-2">
+                                        <p>Kindly visit our <a href="./src/pages/services/food.html" class="custom-color">Services</a> page to submit your order request. After submitting your request, our team will reach out to confirm the details and assist you through the process to ensure your order meets your specific needs.</p>
+                                    </div>
+                                </div>
+                        
+                                <!-- faq item -->
+                                <div class="row border p-3 drop-item mb-3" data-aos="fade-right" data-aos-delay="300">
+                                    <div class="col-12 d-flex justify-content-between">
+                                        <h5 class="custom-color align-content-center">2.) Where are you located?</h5>
+                                        <i class="bi bi-chevron-down fs-3 dropper" onclick="toggleDropdown(this)"></i>
+                                    </div>
+                                    <div class="dropdown-content mb-2">
+                                        <p>Our facility is located at Lot 3-5, Block 8, Phase 2, Mountview Industrial Complex, Carmona, Cavite <a  class="custom-color" target="_blank" href="https://www.google.com/maps/place/Colortree+Label+Corporation/@14.2887368,121.0172677,19z/data=!4m6!3m5!1s0x3397d63c0875e76f:0xa75432f6bc1d165f!8m2!3d14.2894062!4d121.0163801!16s/g/11dx8hcp8_?entry=ttu&g_ep=EgoyMDI0MTExMy4xIKXMDSoASAFQAw==">See map</a> for directions. We welcome visitors and encourage you to schedule an appointment to tour our facility and learn more about our operations.</p>
+                                    </div>
+                                </div>
+                        
+                                <!-- faq item -->
+                                <div class="row border p-3 drop-item mb-3" data-aos="fade-left" data-aos-delay="300">
+                                    <div class="col-12 d-flex justify-content-between">
+                                        <h5 class="custom-color align-content-center">3.) What is your production timeline?</h5>
+                                        <i class="bi bi-chevron-down fs-3 dropper" onclick="toggleDropdown(this)"></i>
+                                    </div>
+                                    <div class="dropdown-content mb-2">
+                                        <p>Production takes approximately 3 weeks from payment confirmation and sample approval. This timeline allows us to ensure the highest quality standards are met. If you have a specific deadline, please inform us, and we will do our best to accommodate your needs.</p>
+                                    </div>
+                                </div>
+                        
+                                <!-- faq item -->
+                                <div class="row border p-3 drop-item mb-3" data-aos="fade-right" data-aos-delay="300">
+                                    <div class="col-12 d-flex justify-content-between">
+                                        <h5 class="custom-color align-content-center">4.) What are your payment terms?</h5>
+                                        <i class="bi bi-chevron-down fs-3 dropper" onclick="toggleDropdown(this)"></i>
+                                    </div>
+                                    <div class="dropdown-content mb-2">
+                                        <p>For new clients, we require a 100% deposit upfront. This policy ensures that we can allocate resources efficiently for your order. For returning clients, we may offer flexible payment options based on our established relationship.</p>
+                                    </div>
+                                </div>
+                        
+                                <!-- faq item -->
+                                <div class="row border p-3 drop-item mb-3" data-aos="fade-left" data-aos-delay="300">
+                                    <div class="col-12 d-flex justify-content-between">
+                                        <h5 class="custom-color align-content-center">5.) What are your delivery options?</h5>
+                                        <i class="bi bi-chevron-down fs-3 dropper" onclick="toggleDropdown(this)"></i>
+                                    </div>
+                                    <div class="dropdown-content mb-2">
+                                        <p>We offer delivery through Lalamove, with costs covered by the client, or you may choose to pick up your order directly. We strive to provide flexible delivery options to suit your schedule, and we are happy to coordinate with you to ensure timely delivery of your products.</p>
+                                    </div>
+                                </div>
+                        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <br><br>
+    <br><br>
+    <br><br>
+
+
+    <!-- footer -->
+    <footer id="footer" class="footer">
+        <div class="container">
+            <!-- Foot heading -->
+            <div class="text-center">
+                <h1 class="text-custom fw-bold lead-foot">Colortree Label Corporation</h1>
+                <i class="text-custom">Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</i>
+                <ul class="nav d-flex justify-content-center list-unstyled social-links-md mt-3">
+                    <!-- Lazada -->
+                     <li class="me-3 p-3">
+                        <a href="https://www.lazada.com.ph/shop/colortree-label-corporation-ph/">
+                            <svg width="20px" height="28px" viewBox="0 0 50.8 50.8" xmlns="http://www.w3.org/2000/svg" class="icon">
+                                <path d="M28.048 14.434c1.041-.555 7.536-4.625 7.772-4.76.02-.012.509-.348 1.156.022.902.486 7.055 4.252 7.31 4.437.439.254.693.717.693 1.225v13.496a1.371 1.371 0 0 1-.786 1.11c-.578.323-15.89 9.936-17.995 11.092-.486.3-1.087.3-1.596.023-2.059-1.202-17.417-10.815-17.995-11.093a1.407 1.407 0 0 1-.786-1.132v-13.52c0-.484.254-.947.647-1.2l7.356-4.46c.37-.209.786-.232 1.156-.024.185.092 6.962 4.53 8.026 4.945 1.573.717 3.539.67 5.042-.161z" style="fill:none;stroke:#000000;stroke-width:3.17491;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
+                            </svg>
+                        </a>
+                     </li>
+                    <li class="me-3 p-3 d-flex justify-content-center align-items-center"><a href="https://www.facebook.com/ColortreeLabel"><i class="bi bi-facebook icon"></i></a></li>
+                    <li class="me-3 p-3 d-flex justify-content-center align-items-center"><a href="https://www.instagram.com/colortreelabel/#"><i class="bi bi-instagram icon"></i></a></li>
+                    <li class="me-3 p-3 d-flex justify-content-center align-items-center"><a href="https://www.tiktok.com/@colortreelabel?_t=8m3zpT3owit&_r=1"><i class="bi bi-tiktok icon"></i></a></li>
+                </ul>
+            </div>
+
+            <hr class="text-light">
+
+            <div class="text-center">
+                <p class="text-custom">© Copyright Colortree Label Corporation.All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <!-- Bootstrap 5.3.3 JS Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Data AOS JS CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Page script -->
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+        });
+
+        // Page constants
+        const navbar = $('.navbar');
+        const navHeading = $('.nav-heading');
+        const navToggle = $('#navbarToggle');
+        const navLinks = $('.navbar-nav .nav-link');
+
+        function toggleDropdown(element) {
+          const dropdownContent = element.parentElement.nextElementSibling;
+          dropdownContent.classList.toggle('show');
+          element.classList.toggle('rotate');
+        }
+
+        // Ready Function
+        $(document).ready(function() {
+            $('#navbarSupportedContent').on('shown.bs.collapse', function () {
+                // Switch to close icon when menu is fully expanded
+                $('#toggleIcon').removeClass('fa-bars').addClass('fa-times');
+            });
+
+            $('#navbarSupportedContent').on('hidden.bs.collapse', function () {
+                // Switch to bars icon when menu is fully collapsed
+                $('#toggleIcon').removeClass('fa-times').addClass('fa-bars');
+            });
+
+            
+        });
+        // on window load
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 0) {
+                navbar.addClass('scrolled');
+                navHeading.addClass('scrolled-text');
+                navLinks.addClass('scrolled-text');
+                navToggle.addClass('scrolled-text');
+            } else {
+                navbar.removeClass('scrolled');
+                navHeading.removeClass('scrolled-text');
+                navLinks.removeClass('scrolled-text');
+                navToggle.removeClass('scrolled-text');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Tree Hiring(Admin)</title>
+    <link rel="icon" href="../../assets/img/fav-logo.png" type="image/webp">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Bootstrap 5.3.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Main css -->
+    <link rel="stylesheet" href="../css/admin.css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Data AOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <style>
+        .content-container {
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+            width: 100% !important;
+        }
+        .pos-card {
+            transition: all 0.3s ease-out;
+            overflow-y: hidden;
+            height: auto;
+        }
+        .bi {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .rotate {
+            transform: rotate(180deg);
+        }
+        .position-details {
+            display: none; /* Start with the details hidden */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container my-5">
+        <div class="border content-container mb-5">
+            <div class="navigation w-25">
+                <div class="d-flex justify-content-between w-25">
+                    <a href="./hiringAdd.html" class="btn border rounded-0 nav-btn">Add</a>
+                    <a href="./hiringPositions.html" class="btn border rounded-0 nav-btn active-link">View</a>
+                    <a href="#" class="btn border rounded-0 nav-btn">Applications</a>
+                </div>  
+            </div>
+            <div class="p-3">
+                <div id="posContainer"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5.3.3 JS Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Data AOS JS CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Page script -->
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+        });
+
+        // Toggle visibility of additional details
+        function toggleDropdown(element) {
+            const detailsDiv = $(element).closest('.pos-card').find('.position-details');
+            
+            // Slide toggle the details div (show or hide with animation)
+            detailsDiv.stop(true, true).slideToggle();
+
+            // Toggle the rotate class for the icon
+            $(element).toggleClass('rotate');
+        }
+
+        // Deletes position for DB table
+        function deletePos(position) {
+            console.log(position);
+        }
+        
+        // Function to fetch positions to populate page
+        function populatePositions() {
+            $.ajax({
+                type: 'GET',
+                url: './hiringPositions.php',
+                dataType: 'json',
+                success: function(response) {
+                    const posContainer = $('#posContainer');
+                    posContainer.empty();
+
+                    response.forEach(function(item) {
+                        let formattedDate = new Date(item.date_posted);
+                        let dateOnly = formattedDate.toISOString().split('T')[0];
+
+                        // Parse the JSON strings into arrays
+                        let responsibilities = JSON.parse(item.responsibilities);
+                        let qualifications = JSON.parse(item.qualifications);
+                        let benefits = JSON.parse(item.benefits);
+
+                        // Initialize strings to hold the responsibilities, qualifications, and benefits HTML
+                        let responsibilitiesHTML = '';
+                        let qualificationsHTML = '';
+                        let benefitsHTML = '';
+
+                        // Use forEach to build the HTML content
+                        responsibilities.forEach(function(item) {
+                            responsibilitiesHTML += `<li>${item}</li>`;
+                        });
+
+                        qualifications.forEach(function(item) {
+                            qualificationsHTML += `<li>${item}</li>`;
+                        });
+
+                        benefits.forEach(function(item) {
+                            benefitsHTML += `<li>${item}</li>`;
+                        });
+
+
+                        let content = `
+                            <div class="border rounded p-3 pos-card mb-3">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h2>${item.pos_name}</h2>
+                                    <i class="bi bi-caret-down fs-3" onclick="toggleDropdown(this)"></i>
+                                </div>
+                                <p class="lead">Position ID: ${item.UID}</p>
+                                <div class="d-flex justify-content-between">
+                                    <p>Date Posted: ${dateOnly}</p>
+                                    <p>Job Type: ${item.job_type}</p>
+                                </div>
+
+                                <div class="position-details">
+                                    <div class="mt-2 mb-2">
+                                        <h3>Job Description</h3>
+                                        <p>${item.job_description}</p>
+                                    </div>
+                                    <div>
+                                        <h5>Responsibilities</h5>
+                                        <ul>${responsibilitiesHTML}</ul>
+                                    </div>
+            
+                                    <div>
+                                        <h5>Qualifications</h5>
+                                        <ul>${qualificationsHTML}</ul>
+                                    </div>
+            
+                                    <div>
+                                        <h5>Benefits</h5>
+                                        <ul>${benefitsHTML}</ul>
+                                    </div>
+                                </div>
+                                <div class="text-end mt-3">
+                                    <button class="btn btn-danger" onclick="deletePos('${item.UID}')">Delete</button>
+                                </div>
+
+
+                            </div>
+                        `;
+
+                        posContainer.append(content);
+                    });
+                },
+                error: function(xhr, status, error) {
+                    alert("Internal Server Error: Please check browser console for errors!");
+                    console.error('Error: ', error);
+                }
+            });
+
+        }
+        
+        $(document).ready(function() {
+            const sessionName = sessionStorage.getItem('sessionUname');
+            if(!sessionName) {
+                alert('You are not permitted to view this page. Please log in firt!');
+                window.location.href = './auth.html';
+            } else {
+                populatePositions(); // Call populate positions on initial load
+            }
+        });
+    </script>
+</body>
+</html>

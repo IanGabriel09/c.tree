@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary-color: #508b5d;
+    --primary-colorHover: #487852;
+    --secondary-color: #faf0c9;
+    --light-color: #ececec;
+    --heading-color: #073839;
+    --mute-color: #727272aa;
+    --default-color : #555555;
+    --bg-color: #f8f4ec;
+    --font1: "Archivo Black", sans-serif;
+    --font2: "Raleway", sans-serif;
+}
+body, html {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+p, label {
+    color: var(--default-color) ;
+}
+input::placeholder {
+    color: #b4b4b4 !important;
+}
+/* Custom reusable styles*/
+.text-shadow-custom {
+    text-shadow: 4px 3px 0 #7A7A7A;
+}
+.text-justify-custom {
+    text-align: justify !important;
+}
+.bg-custom {
+    background-color: var(--bg-color) !important;
+}
+.fs-hero {
+    font-size: clamp(36px, 8vw, 120px) !important;
+}
+.fs-hero1 {
+    font-size: clamp(18px, 2vw, 40px) !important;
+}
+.fs-hero2 {
+    font-size: clamp(20px, 1vw, 30px) !important;
+}
+.fs-hero3 {
+    font-size: clamp(40px, 8vw, 60px) !important;
+}
+.lead-custom {
+    font-family: var(--font2) !important;
+    font-size: clamp(12px, 1vw, 24px) !important;
+}
+.lead-custom1 {
+    font-family: var(--font2) !important;
+}
+.lead-foot {
+    font-family: var(--font2) !important;
+}
+.btn-custom {
+    border: 1px solid #fff;
+    color: #fff;
+    transition: 0.3s ease-out !important;
+}
+.btn-custom1 {
+    background-color: var(--primary-color);
+    transition: 0.3s ease-out;
+}
+.btn-custom2 {
+    background-color: #fff !important;
+    border: 1px solid var(--mute-color) !important;
+    color: var(--default-color) !important;
+    transition: 0.3s ease-out;
+}
+.btn-custom:hover {
+    background-color: var(--secondary-color) !important;
+    color: #000 !important;
+}
+.btn-custom1:hover {
+    background-color: var(--primary-colorHover);
+}
+.btn-custom2:hover {
+    background-color: var(--primary-color) !important;
+    color: var(--light-color) !important;
+}
+.border-custom {
+    border: 1px solid var(--primary-color) !important;
+}
+.border-custom1 {
+    border: 1px solid var(--light-color) !important;
+}
+.text-custom {
+    color: var(--light-color) !important;
+}
+.text-custom1 {
+    color: var(--heading-color) !important;
+}
+.text-custom2 {
+    color: var(--heading-color);
+    font-family: var(--font1);
+}
+.text-customMute {
+    color: var(--mute-color);
+}
+.custom-color {
+    color: var(--primary-color) !important;
+    font-weight: 900 ;
+}
+.custom-color1 {
+    color: var(--primary-color) !important;
+} 
+.custom-col {
+    width: 13% !important;
+}
+.custom-col1 {
+    width: 24% !important;
+}
+.mt-custom {
+    margin-top: 20vh !important;
+}
+@media(max-width: 768px) {
+    .mt-custom {
+        margin-top: 10vh !important;
+    }
+}
+main {
+    flex: 1; /* This allows the main content to grow and fill available space */
+}
+.content-container {
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    width: 50% !important;
+}
+.active-link {
+    color: var(--secondary-color) !important;
+    background-color: var(--primary-color) !important;
+}
+.nav-btn:hover {
+    color: var(--secondary-color);
+    background-color: var(--primary-colorHover);
+}
